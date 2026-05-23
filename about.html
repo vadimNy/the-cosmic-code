@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>About the Architect | The Cosmic Code</title>
+    <!-- Modern SEO Meta Tags -->
+    <meta name="description" content="Meet Elara Vance, the Cosmic Architect. Learn how she blends mathematical precision with metaphysical insights to construct your life's blueprint."/>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Hanken+Grotesk:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#e9c400",
+                      "error": "#ffb4ab",
+                      "inverse-surface": "#e1e2eb",
+                      "background": "#10131a",
+                      "on-primary": "#420089",
+                      "on-primary-container": "#3a0079",
+                      "on-secondary-fixed-variant": "#544600",
+                      "outline-variant": "#4b4454",
+                      "surface-bright": "#363940",
+                      "on-surface": "#e1e2eb",
+                      "surface-variant": "#32353c",
+                      "tertiary-fixed-dim": "#00dbe9",
+                      "surface-container-high": "#272a31",
+                      "inverse-primary": "#7832d9",
+                      "on-secondary-fixed": "#221b00",
+                      "tertiary": "#00dbe9",
+                      "surface-container-highest": "#32353c",
+                      "surface-tint": "#d6baff",
+                      "primary-fixed": "#ecdcff",
+                      "on-surface-variant": "#cdc2d7",
+                      "surface-container-lowest": "#0b0e14",
+                      "inverse-on-surface": "#2e3037",
+                      "primary-container": "#aa73ff",
+                      "surface": "#10131a",
+                      "on-tertiary-fixed": "#002022",
+                      "on-tertiary": "#00363a",
+                      "on-tertiary-container": "#002f33",
+                      "on-secondary": "#3a3000",
+                      "on-error-container": "#ffdad6",
+                      "surface-container": "#1d2026",
+                      "error-container": "#93000a",
+                      "primary": "#d6baff",
+                      "on-primary-fixed": "#280057",
+                      "secondary": "#fff9ef",
+                      "surface-container-low": "#191c22",
+                      "on-primary-fixed-variant": "#5f00c0",
+                      "tertiary-container": "#00a0aa",
+                      "secondary-container": "#ffdb3c",
+                      "secondary-fixed": "#ffe16d",
+                      "tertiary-fixed": "#7df4ff",
+                      "on-tertiary-fixed-variant": "#004f54",
+                      "outline": "#968da0"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "max-width": "1440px",
+                      "unit": "8px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Bodoni Moda"],
+                      "headline-display": ["Bodoni Moda"],
+                      "body-md": ["Hanken Grotesk"],
+                      "headline-lg": ["Bodoni Moda"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "label-sm": ["JetBrains Mono"],
+                      "headline-lg-mobile": ["Bodoni Moda"]
+              },
+              "fontSize": {
+                      "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                      "headline-display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #10131a;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nebula-glow {
+            filter: blur(80px);
+            opacity: 0.15;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .orbit-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+
+        .orbit-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #d6baff;
+            top: 50%;
+            left: 50%;
+            transform-origin: -40px 0;
+            animation: orbit 4s linear infinite;
+        }
+
+        @keyframes orbit {
+            from { transform: rotate(0deg) translateX(40px); }
+            to { transform: rotate(360deg) translateX(40px); }
+        }
+
+        #star-field {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+        }
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: drift var(--duration) linear infinite;
+        }
+        @keyframes drift {
+            from { transform: translateY(0); }
+            to { transform: translateY(-100vh); }
+        }
+
+        .starlight-border {
+            box-shadow: 0 0 15px rgba(214, 186, 255, 0.2);
+        }
+
+        .tilt-card {
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+
+        /* Scroll Reveal CSS */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Cursor None on Desktop */
+        @media (min-width: 768px) {
+            body, html, a, button, input, textarea, select {
+                cursor: none;
+            }
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface bg-background">
+
+<!-- Star Field Container -->
+<div id="star-field"></div>
+
+<!-- Cosmic Custom Cursor -->
+<div id="cosmic-cursor" class="fixed top-0 left-0 w-8 h-8 rounded-full border border-primary pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-75 ease-out mix-blend-screen bg-primary/10 shadow-[0_0_15px_rgba(214,186,255,0.4)] hidden md:block"></div>
+<div id="cosmic-cursor-dot" class="fixed top-0 left-0 w-2 h-2 rounded-full bg-tertiary pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-75 ease-out hidden md:block"></div>
+
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-margin-desktop py-4 bg-[#10131a]/40 backdrop-blur-3xl border-b border-white/10 shadow-[0_0_20px_rgba(214,186,255,0.1)]">
+    <div class="font-headline-md text-headline-md font-bold text-on-surface tracking-wider">
+        The Cosmic Code
+    </div>
+    <nav class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+        <a class="text-on-surface-variant hover:text-on-surface transition-all duration-300 ease-in-out hover:scale-105" href="index.html">Home</a>
+        <a class="text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-300 ease-in-out hover:scale-105" href="about.html">About</a>
+        <a class="text-on-surface-variant hover:text-on-surface transition-all duration-300 ease-in-out hover:scale-105" href="how-it-works.html">How It Works</a>
+        <a class="text-on-surface-variant hover:text-on-surface transition-all duration-300 ease-in-out hover:scale-105" href="contact.html">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+        <button onclick="window.location.href='contact.html'" class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-[0_0_20px_rgba(157,92,255,0.4)]">
+            Book a Reading
+        </button>
+        <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none z-50 relative">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-[#10131a]/95 backdrop-blur-2xl z-40 translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-center items-center gap-8 md:hidden">
+    <a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors mobile-nav-link" href="index.html">Home</a>
+    <a class="font-headline-md text-headline-md text-primary font-bold mobile-nav-link" href="about.html">About</a>
+    <a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors mobile-nav-link" href="how-it-works.html">How It Works</a>
+    <a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors mobile-nav-link" href="contact.html">Contact</a>
+    <a class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(214,186,255,0.4)] mt-4 mobile-nav-link" href="contact.html">Book a Reading</a>
+</div>
+
+<main class="relative pt-32 pb-24 overflow-hidden">
+    <!-- Background Elements -->
+    <div class="nebula-glow top-0 right-0 w-[600px] h-[600px] bg-primary-container/20 rounded-full"></div>
+    <div class="nebula-glow bottom-0 left-0 w-[500px] h-[500px] bg-tertiary-container/20 rounded-full"></div>
+    
+    <!-- Hero Profile Section -->
+    <section class="max-w-max-width mx-auto px-4 md:px-margin-desktop mb-32 scroll-reveal">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7">
+                <span class="font-label-sm text-label-sm text-primary tracking-[0.2em] mb-4 block uppercase">The Persona</span>
+                <h1 class="font-headline-display text-headline-display mb-8">The Cosmic <span class="text-primary">Architect.</span></h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed mb-8">
+                    The universe isn't a chaotic void—it's a blueprint. Every celestial alignment and numerical sequence is a deliberate design choice in the architecture of your life. As the Cosmic Architect, I don't just read stars; I translate the divine mathematics of the cosmos into actionable structural plans for your future.
+                </p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-[1px] bg-primary"></div>
+                    <span class="font-label-sm text-label-sm text-outline italic">Est. 2012 | Mastery of Numerology &amp; Celestial Navigation</span>
+                </div>
+            </div>
+            <div class="lg:col-span-5">
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-primary/20 blur-2xl rounded-full opacity-50 group-hover:opacity-80 transition-opacity"></div>
+                    <div class="glass-panel aspect-[4/5] rounded-xl overflow-hidden relative z-10 starlight-border tilt-card">
+                        <img alt="Portrait of Elara Vance, the Cosmic Architect" class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYDRyXZwWFs5Rv08r1KHsWNmM5h9G1QFT6PlOC8-Z0YpWPzEMa_SiHM5gd1eDyzLa5jTUE9G4tFJcdXLdZabI6d56Z63rOWXsxd2A8odCPYF4jha8v6-rOvGm6rJ3TF5Sj2Lt1DDS-l4fqRsyUUvfYTghB9c90gDpqV8V-01xcUlTPae4EcToK5qWAwkFAshrmtrAWwaT1E_xqeTHs1whRyzOioWLjIjtekAIauNodijwuCPUzXTR2fOEre735jDhwZ55j_-Y8Ira8"/>
+                    </div>
+                    <!-- Micro-interaction: Orbital -->
+                    <div class="absolute -bottom-8 -right-8 glass-panel p-6 rounded-full hidden md:block z-20 tilt-card">
+                        <div class="orbit-container">
+                            <div class="absolute inset-0 flex items-center justify-center text-tertiary">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shutter_speed</span>
+                            </div>
+                            <div class="orbit-dot animate-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="mb-32 bg-surface-container-low py-24 relative scroll-reveal">
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <span class="material-symbols-outlined text-primary text-5xl mb-6 opacity-40">format_quote</span>
+            <blockquote class="font-headline-lg text-headline-lg italic leading-tight mb-8">
+                "I see the strings of the universe not as destiny to be feared, but as raw materials to be woven. Your numbers are your foundation; your zodiac is your frame. My job is to ensure the house of your life stands against time."
+            </blockquote>
+            <cite class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-widest">— Elara Vance, The Cosmic Architect</cite>
+        </div>
+    </section>
+
+    <!-- Bento Grid: Philosophy & Method -->
+    <section class="max-w-max-width mx-auto px-4 md:px-margin-desktop mb-32 scroll-reveal">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Precision Tile -->
+            <div class="md:col-span-2 glass-panel p-10 rounded-xl relative group overflow-hidden tilt-card">
+                <div class="absolute top-0 left-0 w-1 h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span class="material-symbols-outlined text-primary mb-6" style="font-variation-settings: 'FILL' 1;">architecture</span>
+                <h3 class="font-headline-md text-headline-md mb-4">The Intersection of Precision</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                    Spirituality is often viewed as soft, nebulous, and intangible. I treat it as a hard science. By layering ancient Pythagorean numerology over modern astronomical position data, I create a multidimensional view of your potential. Every calculation is triple-checked. Every alignment is verified. We leave nothing to chance.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white/5 p-4 rounded-lg">
+                        <div class="font-label-sm text-label-sm text-tertiary mb-1">0.001%</div>
+                        <div class="text-on-surface text-xs font-label-sm uppercase">Alignment Margin</div>
+                    </div>
+                    <div class="bg-white/5 p-4 rounded-lg">
+                        <div class="font-label-sm text-label-sm text-tertiary mb-1">8,000+</div>
+                        <div class="text-on-surface text-xs font-label-sm uppercase">Blueprints Mapped</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Spirit Tile -->
+            <div onclick="window.location.href='how-it-works.html'" class="glass-panel p-10 rounded-xl flex flex-col justify-between tilt-card hover:bg-white/5 transition-all duration-300">
+                <div>
+                    <span class="material-symbols-outlined text-secondary-fixed-dim mb-6">flare</span>
+                    <h3 class="font-headline-md text-headline-md mb-4">Divine Intent</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Beyond the numbers lies the soul. Precision is the tool, but purpose is the goal.
+                    </p>
+                </div>
+                <div class="mt-8 border-t border-white/10 pt-6">
+                    <div class="flex items-center gap-2 text-primary font-label-sm text-label-sm">
+                        <span>VIBRATIONAL MASTERY</span>
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Asymmetric Card -->
+            <div class="glass-panel p-10 rounded-xl md:row-start-2 tilt-card">
+                <h3 class="font-headline-md text-headline-md mb-4">The Process</h3>
+                <ul class="space-y-6">
+                    <li class="flex gap-4">
+                        <span class="font-label-sm text-label-sm text-outline">01.</span>
+                        <div>
+                            <h4 class="font-bold text-on-surface">Data Excavation</h4>
+                            <p class="text-sm text-on-surface-variant">Gathering birth vectors and numerical frequencies.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="font-label-sm text-label-sm text-outline">02.</span>
+                        <div>
+                            <h4 class="font-bold text-on-surface">Structural Mapping</h4>
+                            <p class="text-sm text-on-surface-variant">Identifying the friction points and growth nodes.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="md:col-span-2 glass-panel p-10 rounded-xl md:row-start-2 bg-gradient-to-br from-white/5 to-primary/10 tilt-card">
+                <div class="flex flex-col md:flex-row gap-8 h-full">
+                    <div class="flex-1">
+                        <h3 class="font-headline-md text-headline-md mb-4">Professional Bio</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Elara Vance spent fifteen years as a structural engineer before a profound celestial event shifted her gaze from earthly skyscrapers to heavenly ones. Today, she bridges the gap between the logical and the mystical, serving as a consultant for high-stakes leaders who require both spiritual guidance and analytical rigor.
+                        </p>
+                    </div>
+                    <div class="w-full md:w-48 h-48 rounded-lg overflow-hidden shrink-0 group">
+                        <img alt="The Cosmic Archive Blueprint Studio" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZpGEVQ29hD8-oh3NN_nxr2jmahBFfndKe77Q77Sk9M8XEImYKAyvAvsZt7D7MHX3vV7YEoTOu52jbM2nXUg6Z7z6Gdf6s70OduuZq4tayIBEAMCbaxVci_t61in5TAkPqYcMDG5d8pPdCsclGPLjzIhMcDm67r2DRZo-h92BXzrvp9Ab2ZJ7YrFxxYOsn5RQL5U75ApkHLJu-8pqESp8uW-BlvwEmYxywtpk2J16pBvi_HSnDdl-5Zux-Cl484eUKucGpCgdlAdJE"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="max-w-max-width mx-auto px-4 md:px-margin-desktop scroll-reveal">
+        <div class="glass-panel p-12 md:p-20 rounded-3xl text-center relative overflow-hidden group tilt-card">
+            <div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+            <div class="relative z-10">
+                <h2 class="font-headline-lg text-headline-lg mb-6">Ready to view your <span class="text-primary italic">blueprint?</span></h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-10">
+                    The stars are already aligned. All that remains is for you to read the plans and start building the life you were designed for.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(157,92,255,0.5)] flex items-center gap-2" href="contact.html">
+                        <span>Reach Out to the Architect</span>
+                        <span class="material-symbols-outlined">mail</span>
+                    </a>
+                    <a class="border border-secondary-fixed-dim text-secondary-fixed-dim px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:bg-secondary-fixed-dim/10" href="how-it-works.html">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-12 px-4 md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8 bg-surface-container-lowest border-t border-white/5">
+    <div class="font-headline-md text-headline-md text-secondary-fixed-dim">
+        The Cosmic Code
+    </div>
+    <div class="flex gap-8 font-label-sm text-label-sm text-outline">
+        <a class="hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Instagram</a>
+        <a class="hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Twitter</a>
+        <a class="hover:text-primary transition-colors opacity-80 hover:opacity-100" href="contact.html">Contact</a>
+        <a class="hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Privacy</a>
+    </div>
+    <p class="font-label-sm text-label-sm text-tertiary">
+        © 2024 The Cosmic Code | The Cosmic Architect
+    </p>
+</footer>
+
+<script>
+    // Star Field Generator
+    const starField = document.getElementById('star-field');
+    const starCount = 120;
+
+    for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        
+        const size = Math.random() * 2 + 1;
+        const posX = Math.random() * 100;
+        const posY = Math.random() * 100;
+        const duration = Math.random() * 30 + 20;
+        const delay = Math.random() * -50;
+        const opacity = Math.random() * 0.5 + 0.2;
+
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.left = `${posX}%`;
+        star.style.top = `${posY}%`;
+        star.style.opacity = opacity;
+        star.style.setProperty('--duration', `${duration}s`);
+        star.style.animationDelay = `${delay}s`;
+
+        starField.appendChild(star);
+    }
+
+    // Dynamic Custom Cursor with Momentum / Elasticity
+    const cursor = document.getElementById('cosmic-cursor');
+    const cursorDot = document.getElementById('cosmic-cursor-dot');
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+    let dotX = 0, dotY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateCursor() {
+        cursorX += (mouseX - cursorX) * 0.12;
+        cursorY += (mouseY - cursorY) * 0.12;
+        dotX += (mouseX - dotX) * 0.25;
+        dotY += (mouseY - dotY) * 0.25;
+
+        if (cursor) {
+            cursor.style.left = `${cursorX}px`;
+            cursor.style.top = `${cursorY}px`;
+        }
+        if (cursorDot) {
+            cursorDot.style.left = `${dotX}px`;
+            cursorDot.style.top = `${dotY}px`;
+        }
+
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Hover scales and glows
+    const clickables = document.querySelectorAll('a, button, input, textarea, select, details');
+    clickables.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            if (cursor) {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.6)';
+                cursor.style.backgroundColor = 'rgba(0, 219, 233, 0.15)';
+                cursor.style.borderColor = '#00dbe9';
+                cursor.style.boxShadow = '0 0 20px rgba(0, 219, 233, 0.6)';
+            }
+        });
+        el.addEventListener('mouseleave', () => {
+            if (cursor) {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.backgroundColor = 'rgba(214, 186, 255, 0.1)';
+                cursor.style.borderColor = '#d6baff';
+                cursor.style.boxShadow = '0 0 15px rgba(214, 186, 255, 0.4)';
+            }
+        });
+    });
+
+    // Mobile Navigation overlay toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+    if (mobileMenuBtn && mobileMenuOverlay) {
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenuOverlay.classList.contains('translate-x-0');
+            if (isOpen) {
+                mobileMenuOverlay.classList.remove('translate-x-0');
+                mobileMenuOverlay.classList.add('translate-x-full');
+                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">menu</span>';
+            } else {
+                mobileMenuOverlay.classList.remove('translate-x-full');
+                mobileMenuOverlay.classList.add('translate-x-0');
+                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">close</span>';
+            }
+        });
+
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuOverlay.classList.remove('translate-x-0');
+                mobileMenuOverlay.classList.add('translate-x-full');
+                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">menu</span>';
+            });
+        });
+    }
+
+    // Dynamic 3D Card Tilting (relative to each card's center)
+    const tiltCards = document.querySelectorAll('.tilt-card');
+    tiltCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const cardX = e.clientX - rect.left;
+            const cardY = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const tiltX = ((cardY - centerY) / centerY) * -6;
+            const tiltY = ((cardX - centerX) / centerX) * 6;
+            
+            card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.02)`;
+            card.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(214, 186, 255, 0.1)';
+            card.style.transition = 'transform 0.1s ease, box-shadow 0.1s ease';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+            card.style.boxShadow = 'none';
+            card.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
+        });
+    });
+
+    // Cursor-Responsive Ambient Background Nebulas
+    document.addEventListener('mousemove', (e) => {
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        
+        const nebulas = document.querySelectorAll('.nebula-glow');
+        nebulas.forEach((nebula, index) => {
+            const speed = (index + 1) * 30;
+            const moveX = (x - 0.5) * speed;
+            const moveY = (y - 0.5) * speed;
+            nebula.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+    });
+
+    // Cinematic Viewport Scroll Reveals
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, {
+        threshold: 0.05
+    });
+
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
+</script>
+</body>
+</html>

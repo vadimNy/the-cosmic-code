@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>The Cosmic Code | Unlock the Geometry of Your Soul</title>
+    <!-- Modern SEO Meta Tags -->
+    <meta name="description" content="Personalized Numerology and Zodiac insights curated by the Cosmic Architect to reveal your hidden path. Decode the geometry of your soul."/>
+    <!-- Fonts -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:wght@100..900&amp;family=JetBrains+Mono:wght@100..800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#e9c400",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#e1e2eb",
+                        "background": "#10131a",
+                        "on-primary": "#420089",
+                        "on-primary-container": "#3a0079",
+                        "on-secondary-fixed-variant": "#544600",
+                        "outline-variant": "#4b4454",
+                        "surface-bright": "#363940",
+                        "on-surface": "#e1e2eb",
+                        "surface-variant": "#32353c",
+                        "tertiary-fixed-dim": "#00dbe9",
+                        "surface-container-high": "#272a31",
+                        "inverse-primary": "#7832d9",
+                        "on-secondary-fixed": "#221b00",
+                        "tertiary": "#00dbe9",
+                        "surface-container-highest": "#32353c",
+                        "surface-tint": "#d6baff",
+                        "primary-fixed": "#ecdcff",
+                        "on-surface-variant": "#cdc2d7",
+                        "surface-container-lowest": "#0b0e14",
+                        "inverse-on-surface": "#2e3037",
+                        "primary-container": "#aa73ff",
+                        "surface": "#10131a",
+                        "on-tertiary-fixed": "#002022",
+                        "on-tertiary": "#00363a",
+                        "on-tertiary-container": "#002f33",
+                        "on-secondary": "#3a3000",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#10131a",
+                        "on-background": "#e1e2eb",
+                        "primary-fixed-dim": "#d6baff",
+                        "on-error": "#690005",
+                        "on-secondary-container": "#725f00",
+                        "surface-container": "#1d2026",
+                        "error-container": "#93000a",
+                        "primary": "#d6baff",
+                        "on-primary-fixed": "#280057",
+                        "secondary": "#fff9ef",
+                        "surface-container-low": "#191c22",
+                        "on-primary-fixed-variant": "#5f00c0",
+                        "tertiary-container": "#00a0aa",
+                        "secondary-fixed": "#ffe16d",
+                        "tertiary-fixed": "#7df4ff",
+                        "on-tertiary-fixed-variant": "#004f54",
+                        "outline": "#968da0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "max-width": "1440px",
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bodoni Moda"],
+                        "headline-display": ["Bodoni Moda"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #10131a;
+            color: #e1e2eb;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            border-right: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .orbital {
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .starlight-glow:hover {
+            box-shadow: 0 0 30px rgba(214, 186, 255, 0.3);
+        }
+
+        #star-field {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+        }
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: drift var(--duration) linear infinite;
+        }
+        @keyframes drift {
+            from { transform: translateY(0); }
+            to { transform: translateY(-100vh); }
+        }
+
+        /* 3D Tilt Cards Transition */
+        .tilt-card {
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+
+        /* Scroll Reveal CSS */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Video Reveal & Fade on First Load */
+        @keyframes video-reveal {
+            0% { opacity: 0; filter: brightness(0.1) contrast(1.1); }
+            100% { opacity: 1; filter: brightness(1) contrast(1); }
+        }
+        .video-reveal-anim {
+            animation: video-reveal 4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Custom Cursor None on Desktop */
+        @media (min-width: 768px) {
+            body, html, a, button, input, textarea, select {
+                cursor: none;
+            }
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary selection:text-on-primary">
+
+<!-- Star Field Container -->
+<div id="star-field"></div>
+
+<!-- Cosmic Custom Cursor -->
+<div id="cosmic-cursor" class="fixed top-0 left-0 w-8 h-8 rounded-full border border-primary pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-75 ease-out mix-blend-screen bg-primary/10 shadow-[0_0_15px_rgba(214,186,255,0.4)] hidden md:block"></div>
+<div id="cosmic-cursor-dot" class="fixed top-0 left-0 w-2 h-2 rounded-full bg-tertiary pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-75 ease-out hidden md:block"></div>
+
+<!-- Top Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-[#10131a]/40 backdrop-blur-3xl border-b border-white/10 shadow-[0_0_20px_rgba(214,186,255,0.1)]">
+    <div class="font-headline-md text-headline-md font-bold text-on-surface tracking-wider">The Cosmic Code</div>
+    <div class="hidden md:flex gap-8 items-center">
+        <a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1 transition-all" href="index.html">Home</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-all duration-300 ease-in-out hover:scale-105" href="about.html">About</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-all duration-300 ease-in-out hover:scale-105" href="how-it-works.html">How It Works</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-all duration-300 ease-in-out hover:scale-105" href="contact.html">Contact</a>
+    </div>
+    
+    <!-- Mobile Hamburger and Desktop Button CTA -->
+    <div class="flex items-center gap-4">
+        <button onclick="window.location.href='contact.html'" class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-[0_0_15px_rgba(214,186,255,0.4)]">
+            Book a Reading
+        </button>
+        <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none z-50 relative">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-[#10131a]/95 backdrop-blur-2xl z-40 translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-center items-center gap-8 md:hidden">
+    <a class="font-headline-md text-headline-md text-primary font-bold mobile-nav-link" href="index.html">Home</a>
+    <a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors mobile-nav-link" href="about.html">About</a>
+    <a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors mobile-nav-link" href="how-it-works.html">How It Works</a>
+    <a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors mobile-nav-link" href="contact.html">Contact</a>
+    <a class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(214,186,255,0.4)] mt-4 mobile-nav-link" href="contact.html">Book a Reading</a>
+</div>
+
+<!-- Hero Section -->
+<header class="relative w-full flex flex-col items-center overflow-hidden pt-24 min-h-[90vh]">
+    <!-- View Mode Toggle Button to OBSERVE THE VOID -->
+    <button id="toggle-void-btn" class="absolute right-margin-mobile md:right-margin-desktop top-32 z-20 flex items-center gap-2 border border-primary/40 bg-background/50 backdrop-blur-md text-primary px-4 py-2 rounded-full font-label-sm text-label-sm hover:border-primary hover:text-white transition-all duration-300 hover:shadow-[0_0_15px_rgba(214,186,255,0.3)]">
+        <span id="void-btn-icon" class="material-symbols-outlined text-sm">visibility</span>
+        <span id="void-btn-text">OBSERVE THE VOID</span>
+    </button>
+
+    <div class="absolute inset-x-0 bottom-0 top-16 z-0 flex items-center justify-center overflow-hidden">
+        <!-- High-Performance Single Video Loop with Rhythmic Cosmic Fade-Out Transition -->
+        <div class="relative w-full h-full flex items-center justify-center bg-background">
+            <video id="hero-vortex-video" class="w-full h-full block object-cover absolute inset-0 transition-all duration-[700ms] ease-in-out video-reveal-anim" autoplay loop muted playsinline style="mask-image: linear-gradient(transparent 0%, black 20%, black 80%, transparent 100%);">
+                <source src="Numerology Hero Section Vortex.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="absolute inset-0 bg-[radial-gradient(circle,transparent_30%,#10131a_105%)] pointer-events-none"></div>
+            <div class="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-[#10131a] via-[#10131a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute inset-x-0 bottom-0 h-96 bg-gradient-to-t from-[#10131a] via-[#10131a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute inset-y-0 left-0 w-64 bg-gradient-to-r from-[#10131a] to-transparent pointer-events-none"></div>
+            <div class="absolute inset-y-0 right-0 w-64 bg-gradient-to-l from-[#10131a] to-transparent pointer-events-none"></div>
+        </div>
+    </div>
+    
+    <!-- Hero Text Content pushed down to avoid covering the vortex core -->
+    <div class="relative z-10 max-w-4xl px-margin-mobile md:px-0 text-center flex flex-col items-center pt-[50vh] pb-16 transition-all duration-1000 ease-out">
+        <span class="font-label-sm text-label-sm text-tertiary mb-6 tracking-widest uppercase">Ancient Wisdom • Modern Precision</span>
+        <h1 class="font-headline-display text-headline-display md:text-6xl text-white mb-6 leading-tight">
+            Unlock the Geometry <br/>of Your Soul
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
+            Personalized Numerology and Zodiac insights curated by the Cosmic Architect to reveal your hidden path.
+        </p>
+        <button onclick="window.location.href='contact.html'" class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(214,186,255,0.5)]">
+            Begin Your Journey
+        </button>
+    </div>
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-30 orbital pointer-events-none z-0">
+        <div class="w-[600px] h-[600px] border border-white/10 rounded-full flex items-center justify-center">
+            <div class="w-4 h-4 bg-primary rounded-full absolute -top-2"></div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Section 1: The Architecture of Fate -->
+    <section class="py-24 md:py-40 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto scroll-reveal">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7">
+                <h2 class="font-headline-lg text-headline-lg md:text-5xl mb-8">The Architecture of Fate</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                    The universe is not a series of random events, but a complex, mathematical tapestry woven with purpose. Your life is governed by cosmic blueprints that define your strengths, your shadows, and your ultimate trajectory.
+                </p>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                    By decoding the numeric vibrations of your birth and the celestial alignment of the stars, we unveil the hidden structure of your existence. This is not fortune-telling; it is the observation of cosmic geometry.
+                </p>
+                <div class="flex gap-4">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-3xl">token</span>
+                        <span class="font-label-sm text-label-sm text-white">Precise Mapping</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-tertiary text-3xl">auto_awesome</span>
+                        <span class="font-label-sm text-label-sm text-white">Spiritual Clarity</span>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-5 relative group">
+                <div class="glass-card aspect-square rounded-full flex items-center justify-center p-8 overflow-hidden relative border-primary/20 tilt-card">
+                    <img alt="Cosmic Architecture" class="w-full h-full object-cover rounded-full mix-blend-screen opacity-80 transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz0CRYXkwzCFpX0LOsvB6nvgqQSReQyjVeLJEHw8Tl8oSwwiabALQulM4ynpl8VO_cTy1F5j1XXYfK3hR2Xzg1FeCgtIhQo4JwQi3GEooL2ywt9iY12IWAr5f4OSSKRbMiIBiNrYaAJae50WQadIWtYjzZqYLho98mo2Z3iVPp7OhlNuY3UonFQ7hzrWb91BFWaWRhmQWqFNusnj3WODiwX3OCfIHjzkc-1IWPq7f5JLyvgncHMbK6EnQ3suoikqoqzg8OOAMGKSCq"/>
+                    <div class="absolute inset-0 bg-primary/10 rounded-full animate-pulse pointer-events-none"></div>
+                </div>
+                <!-- Small orbiting floating card -->
+                <div class="absolute -top-4 -right-4 glass-card p-4 rounded-2xl shadow-xl border-white/20 starlight-glow tilt-card">
+                    <p class="font-label-sm text-label-sm text-primary">BLUEPRINT V.1.02</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Featured Services (Bento Grid) -->
+    <section class="py-24 bg-surface-container-low px-margin-mobile md:px-margin-desktop scroll-reveal">
+        <div class="max-w-max-width mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-lg text-headline-lg mb-4">Celestial Modalities</h2>
+                <p class="font-body-md text-body-md text-outline">Instruments for navigating the unseen.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div onclick="window.location.href='how-it-works.html'" class="glass-card p-8 rounded-3xl transition-all duration-500 hover:bg-white/10 group tilt-card" style="transition-delay: 100ms;">
+                    <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+                        <span class="material-symbols-outlined text-2xl">public</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-4">Celestial Map</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        A deep-dive into your planetary positions at the exact moment of your arrival. Map the gravity of your future.
+                    </p>
+                    <a class="text-tertiary flex items-center gap-2 font-label-sm group-hover:gap-4 transition-all" href="how-it-works.html">
+                        EXPLORE THE VOID <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+                <!-- Service 2 -->
+                <div onclick="window.location.href='how-it-works.html'" class="glass-card p-8 rounded-3xl transition-all duration-500 hover:bg-white/10 group border-primary/30 tilt-card" style="transition-delay: 150ms;">
+                    <div class="w-12 h-12 rounded-xl bg-tertiary/20 flex items-center justify-center mb-6 text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-all">
+                        <span class="material-symbols-outlined text-2xl">calculate</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-4">Numeric Vibration</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Frequency is the language of the cosmos. Discover the core numbers that dictate your personality and cycles.
+                    </p>
+                    <a class="text-primary flex items-center gap-2 font-label-sm group-hover:gap-4 transition-all" href="how-it-works.html">
+                        DECODE FREQUENCY <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+                <!-- Service 3 -->
+                <div onclick="window.location.href='how-it-works.html'" class="glass-card p-8 rounded-3xl transition-all duration-500 hover:bg-white/10 group tilt-card" style="transition-delay: 200ms;">
+                    <div class="w-12 h-12 rounded-xl bg-secondary-fixed-dim/20 flex items-center justify-center mb-6 text-secondary-fixed-dim group-hover:bg-secondary-fixed-dim group-hover:text-on-secondary-fixed transition-all">
+                        <span class="material-symbols-outlined text-2xl">balance</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-4">Karmic Alignment</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Understand the spiritual debts and dividends you carry. Align your current actions with your soul's legacy.
+                    </p>
+                    <a class="text-secondary-fixed-dim flex items-center gap-2 font-label-sm group-hover:gap-4 transition-all" href="how-it-works.html">
+                        RECONCILE FATE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: The Cosmic Architect Teaser -->
+    <section class="py-24 md:py-40 relative overflow-hidden scroll-reveal">
+        <!-- Parallax Background Glows -->
+        <div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none nebula-glow">
+            <div class="w-full h-full bg-gradient-to-l from-primary/30 to-transparent"></div>
+        </div>
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/3">
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden glass-card relative border-white/20 tilt-card" style="transition-delay: 250ms;">
+                        <img alt="A professional and ethereal portrait of Elara Vance, representing the Cosmic Architect." class="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGAzk3hjzcgKs2srBsxiOKRoIQdc8TgMIiroHZEO-5-69WiNhYXOpJi5uYTb30OAdrKi7_P4bPyz0PhxULprbffN2fQBRvKpJQ9u8wkdcjUkhVMdpdGKoLD0PKFe7bQfUhwNkr0WVww7LpQNgxQcvvtofY8mZlPa4KZHq9ZSaFFxtpG5uOCE7He68425GyvmlrJHsN8MZ4Y1xzHktjAwVGinuNM2XAu3_qWsSH854D1clHbeJd4xiWcAEdd97WKO4KPjDsh7Lq4-F5"/>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3">
+                    <span class="font-label-sm text-label-sm text-secondary-fixed-dim mb-4 block">MEET THE OBSERVER</span>
+                    <h2 class="font-headline-lg text-headline-lg mb-8">The Cosmic Architect</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                        With two decades of research into the intersection of metaphysics and mathematical probability, the Architect provides a clinical yet profound perspective on the spiritual path.
+                    </p>
+                    <a class="inline-flex items-center gap-4 text-white hover:text-primary transition-colors font-bold text-lg group" href="about.html">
+                        Explore the Archive 
+                        <span class="w-12 h-px bg-white group-hover:bg-primary group-hover:w-16 transition-all"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section: Book Your Consultation -->
+    <section class="py-24 px-margin-mobile md:px-margin-desktop scroll-reveal">
+        <div class="max-w-5xl mx-auto glass-card rounded-[40px] overflow-hidden relative p-12 md:p-20 text-center tilt-card" style="transition-delay: 300ms;">
+            <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+                <div class="grid grid-cols-6 h-full">
+                    <div class="border-r border-white/20"></div>
+                    <div class="border-r border-white/20"></div>
+                    <div class="border-r border-white/20"></div>
+                    <div class="border-r border-white/20"></div>
+                    <div class="border-r border-white/20"></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="relative z-10">
+                <h2 class="font-headline-display text-headline-display md:text-5xl mb-8">Book Your Consultation</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                    Limited availability for high-fidelity path-finding sessions. Secure your coordinate in the next cosmic cycle.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <button onclick="window.location.href='contact.html'" class="bg-white text-background px-10 py-4 rounded-full font-bold transition-all hover:bg-primary hover:text-on-primary hover:scale-105">
+                        Check Availability
+                    </button>
+                    <button onclick="window.location.href='how-it-works.html'" class="border border-white/20 text-white px-10 py-4 rounded-full font-bold transition-all hover:bg-white/10">
+                        View Pricing Models
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8 bg-surface-container-lowest border-t border-white/5 opacity-80 hover:opacity-100 transition-opacity">
+    <div class="font-headline-md text-headline-md text-secondary-fixed-dim">The Cosmic Architect</div>
+    <div class="font-label-sm text-label-sm text-outline">
+        © 2024 The Cosmic Code | The Cosmic Architect
+    </div>
+    <div class="flex gap-6">
+        <a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors" href="#">Instagram</a>
+        <a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors" href="#">Twitter</a>
+        <a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors" href="contact.html">Contact</a>
+        <a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors" href="#">Privacy</a>
+    </div>
+</footer>
+
+<script>
+    // Star Field Generator
+    const starField = document.getElementById('star-field');
+    const starCount = 120;
+
+    for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        
+        const size = Math.random() * 2 + 1;
+        const posX = Math.random() * 100;
+        const posY = Math.random() * 100;
+        const duration = Math.random() * 30 + 20;
+        const delay = Math.random() * -50;
+        const opacity = Math.random() * 0.5 + 0.2;
+
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.left = `${posX}%`;
+        star.style.top = `${posY}%`;
+        star.style.opacity = opacity;
+        star.style.setProperty('--duration', `${duration}s`);
+        star.style.animationDelay = `${delay}s`;
+
+        starField.appendChild(star);
+    }
+
+    // Dynamic Custom Cursor with Momentum / Elasticity
+    const cursor = document.getElementById('cosmic-cursor');
+    const cursorDot = document.getElementById('cosmic-cursor-dot');
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+    let dotX = 0, dotY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateCursor() {
+        cursorX += (mouseX - cursorX) * 0.12;
+        cursorY += (mouseY - cursorY) * 0.12;
+        dotX += (mouseX - dotX) * 0.25;
+        dotY += (mouseY - dotY) * 0.25;
+
+        if (cursor) {
+            cursor.style.left = `${cursorX}px`;
+            cursor.style.top = `${cursorY}px`;
+        }
+        if (cursorDot) {
+            cursorDot.style.left = `${dotX}px`;
+            cursorDot.style.top = `${dotY}px`;
+        }
+
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Hover scales and glows
+    const clickables = document.querySelectorAll('a, button, input, textarea, select, details');
+    clickables.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            if (cursor) {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.6)';
+                cursor.style.backgroundColor = 'rgba(0, 219, 233, 0.15)';
+                cursor.style.borderColor = '#00dbe9';
+                cursor.style.boxShadow = '0 0 20px rgba(0, 219, 233, 0.6)';
+            }
+        });
+        el.addEventListener('mouseleave', () => {
+            if (cursor) {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.backgroundColor = 'rgba(214, 186, 255, 0.1)';
+                cursor.style.borderColor = '#d6baff';
+                cursor.style.boxShadow = '0 0 15px rgba(214, 186, 255, 0.4)';
+            }
+        });
+    });
+
+    // Mobile Navigation overlay toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+    if (mobileMenuBtn && mobileMenuOverlay) {
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenuOverlay.classList.contains('translate-x-0');
+            if (isOpen) {
+                mobileMenuOverlay.classList.remove('translate-x-0');
+                mobileMenuOverlay.classList.add('translate-x-full');
+                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">menu</span>';
+            } else {
+                mobileMenuOverlay.classList.remove('translate-x-full');
+                mobileMenuOverlay.classList.add('translate-x-0');
+                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">close</span>';
+            }
+        });
+
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuOverlay.classList.remove('translate-x-0');
+                mobileMenuOverlay.classList.add('translate-x-full');
+                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">menu</span>';
+            });
+        });
+    }
+
+    // Dynamic 3D Card Tilting (relative to each card's center)
+    const tiltCards = document.querySelectorAll('.tilt-card');
+    tiltCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const cardX = e.clientX - rect.left;
+            const cardY = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const tiltX = ((cardY - centerY) / centerY) * -6;
+            const tiltY = ((cardX - centerX) / centerX) * 6;
+            
+            card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.02)`;
+            card.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(214, 186, 255, 0.1)';
+            card.style.transition = 'transform 0.1s ease, box-shadow 0.1s ease';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+            card.style.boxShadow = 'none';
+            card.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
+        });
+    });
+
+    // Cursor-Responsive Ambient Background Nebulas
+    document.addEventListener('mousemove', (e) => {
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        
+        const nebulas = document.querySelectorAll('.nebula-glow');
+        nebulas.forEach((nebula, index) => {
+            const speed = (index + 1) * 30;
+            const moveX = (x - 0.5) * speed;
+            const moveY = (y - 0.5) * speed;
+            nebula.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+    });
+
+    // Cinematic Viewport Scroll Reveals
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, {
+        threshold: 0.05
+    });
+
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // --- Interactive "Observe the Void" View Mode Toggle ---
+    const toggleVoidBtn = document.getElementById('toggle-void-btn');
+    const heroContent = document.querySelector('header .relative.z-10');
+    const voidBtnIcon = document.getElementById('void-btn-icon');
+    const voidBtnText = document.getElementById('void-btn-text');
+    let voidMode = false;
+
+    if (toggleVoidBtn && heroContent) {
+        // Set smooth transition on hero content container
+        heroContent.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+        
+        toggleVoidBtn.addEventListener('click', () => {
+            voidMode = !voidMode;
+            if (voidMode) {
+                heroContent.style.opacity = '0';
+                heroContent.style.transform = 'translateY(25px) scale(0.97)';
+                heroContent.style.pointerEvents = 'none';
+                voidBtnIcon.innerText = 'visibility_off';
+                voidBtnText.innerText = 'RESTORE BLUEPRINT';
+                toggleVoidBtn.classList.remove('text-primary', 'border-primary/40');
+                toggleVoidBtn.classList.add('text-tertiary', 'border-tertiary');
+            } else {
+                heroContent.style.opacity = '1';
+                heroContent.style.transform = 'translateY(0) scale(1)';
+                heroContent.style.pointerEvents = 'auto';
+                voidBtnIcon.innerText = 'visibility';
+                voidBtnText.innerText = 'OBSERVE THE VOID';
+                toggleVoidBtn.classList.remove('text-tertiary', 'border-tertiary');
+                toggleVoidBtn.classList.add('text-primary', 'border-primary/40');
+            }
+        });
+    }
+
+    // --- Single Video Rhythmic Cosmic Fade-Out Transition (Flicker-Free Native Loops) ---
+    const video = document.getElementById('hero-vortex-video');
+    let transitionTriggered = false;
+
+    if (video) {
+        video.addEventListener('timeupdate', () => {
+            const duration = video.duration;
+            const currentTime = video.currentTime;
+            
+            if (duration) {
+                // Smoothly fade out the video 0.8 seconds before the loop ends to hide the hard loop join
+                if (currentTime > duration - 0.8 && !transitionTriggered) {
+                    video.style.opacity = '0.05';
+                    video.style.filter = 'brightness(0.1) contrast(1.1)';
+                    transitionTriggered = true;
+                }
+                
+                // Smoothly fade the video back in once the browser natively loops it back to 0
+                if (currentTime < 0.5 && transitionTriggered) {
+                    video.style.opacity = '1';
+                    video.style.filter = 'brightness(1) contrast(1)';
+                    transitionTriggered = false;
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contact Elara Vance | The Cosmic Code</title>
+    <!-- Modern SEO Meta Tags -->
+    <meta name="description" content="Reach out to the Cosmic Architect Elara Vance. Decipher your celestial blueprint with birth matrix mapping and personalized readings."/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:wght@300;400;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+        body {
+            background-color: #10131a;
+            color: #e1e2eb;
+            overflow-x: hidden;
+        }
+
+        .star-field {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at center, #1b1e2b 0%, #10131a 100%);
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: twinkle var(--duration) infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(32px);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glow-hover:hover {
+            box-shadow: 0 0 25px rgba(214, 186, 255, 0.3);
+        }
+
+        .orbital-loader {
+            width: 40px;
+            height: 40px;
+            position: relative;
+        }
+        .orbital-dot {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #d6baff;
+            border-radius: 50%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: orbit 2s linear infinite;
+        }
+        @keyframes orbit {
+            from { transform: rotate(0deg) translateX(15px) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(15px) rotate(-360deg); }
+        }
+
+        .mask-fade-bottom {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+
+        .nebula-glow {
+            filter: blur(80px);
+            opacity: 0.15;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .tilt-card {
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+
+        /* Scroll Reveal CSS */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Cursor None on Desktop */
+        @media (min-width: 768px) {
+            body, html, a, button, input, textarea, select {
+                cursor: none;
+            }
+        }
+    </style>
+    <!-- Tailwind Config Injection -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#e9c400",
+                    "error": "#ffb4ab",
+                    "inverse-surface": "#e1e2eb",
+                    "background": "#10131a",
+                    "on-primary": "#420089",
+                    "on-primary-container": "#3a0079",
+                    "on-secondary-fixed-variant": "#544600",
+                    "outline-variant": "#4b4454",
+                    "surface-bright": "#363940",
+                    "on-surface": "#e1e2eb",
+                    "surface-variant": "#32353c",
+                    "tertiary-fixed-dim": "#00dbe9",
+                    "surface-container-high": "#272a31",
+                    "inverse-primary": "#7832d9",
+                    "on-secondary-fixed": "#221b00",
+                    "tertiary": "#00dbe9",
+                    "surface-container-highest": "#32353c",
+                    "surface-tint": "#d6baff",
+                    "primary-fixed": "#ecdcff",
+                    "on-surface-variant": "#cdc2d7",
+                    "surface-container-lowest": "#0b0e14",
+                    "inverse-on-surface": "#2e3037",
+                    "primary-container": "#aa73ff",
+                    "surface": "#10131a",
+                    "on-tertiary-fixed": "#002022",
+                    "on-tertiary": "#00363a",
+                    "on-tertiary-container": "#002f33",
+                    "on-secondary": "#3a3000",
+                    "on-error-container": "#ffdad6",
+                    "surface-container": "#1d2026",
+                    "error-container": "#93000a",
+                    "primary": "#d6baff",
+                    "on-primary-fixed": "#280057",
+                    "secondary": "#fff9ef",
+                    "surface-container-low": "#191c22",
+                    "on-primary-fixed-variant": "#5f00c0",
+                    "tertiary-container": "#00a0aa",
+                    "secondary-container": "#ffdb3c",
+                    "secondary-fixed": "#ffe16d",
+                    "tertiary-fixed": "#7df4ff",
+                    "on-tertiary-fixed-variant": "#004f54",
+                    "outline": "#968da0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "max-width": "1440px",
+                    "unit": "8px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Bodoni Moda"],
+                    "headline-display": ["Bodoni Moda"],
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Bodoni Moda"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"],
+                    "headline-lg-mobile": ["Bodoni Moda"]
+            },
+            "fontSize": {
+                    "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "headline-display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-body-md selection:bg-primary selection:text-on-primary">
+
+<!-- Star Field Container -->
+<div class="star-field" id="star-container"></div>
+
+<!-- Cosmic Custom Cursor -->
+<div id="cosmic-cursor" class="fixed top-0 left-0 w-8 h-8 rounded-full border border-primary pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-75 ease-out mix-blend-screen bg-primary/10 shadow-[0_0_15px_rgba(214,186,255,0.4)] hidden md:block"></div>
+<div id="cosmic-cursor-dot" class="fixed top-0 left-0 w-2 h-2 rounded-full bg-tertiary pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-75 ease-out hidden md:block"></div>
+
+<!-- Atmospheric Background Elements -->
+<div class="nebula-glow top-0 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full"></div>
+<div class="nebula-glow bottom-0 left-0 w-[300px] h-[300px] bg-tertiary/10 rounded-full"></div>
+
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-[#10131a]/40 backdrop-blur-3xl border-b border-white/10 shadow-[0_0_20px_rgba(214,186,255,0.1)]">
+    <div class="font-headline-md text-headline-md font-bold text-on-surface tracking-wider">The Cosmic Code</div>
+    <nav class="hidden md:flex items-center gap-8">
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-all duration-300 ease-in-out hover:scale-105" href="index.html">Home</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-all duration-300 ease-in-out hover:scale-105" href="about.html">About</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-all duration-300 ease-in-out hover:scale-105" href="how-it-works.html">How It Works</a>
+        <a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-300 ease-in-out hover:scale-105" href="contact.html">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+        <button onclick="window.location.href='contact.html'" class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-body-md font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-[0_0_15px_rgba(214,186,255,0.4)]">
+            Book a Reading
+        </button>
+        <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none z-50 relative">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-[#10131a]/95 backdrop-blur-2xl z-40 translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-center items-center gap-8 md:hidden">
+    <a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors mobile-nav-link" href="index.html">Home</a>
+    <a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors mobile-nav-link" href="about.html">About</a>
+    <a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors mobile-nav-link" href="how-it-works.html">How It Works</a>
+    <a class="font-headline-md text-headline-md text-primary font-bold mobile-nav-link" href="contact.html">Contact</a>
+    <a class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(214,186,255,0.4)] mt-4 mobile-nav-link" href="contact.html">Book a Reading</a>
+</div>
+
+<main class="pt-32 pb-20 px-margin-mobile md:px-margin-desktop">
+    <!-- Hero Section -->
+    <section class="max-w-4xl mx-auto text-center mb-16 scroll-reveal">
+        <h1 class="font-headline-display text-headline-display mb-4 text-on-surface">Initiate Alignment</h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+            The stars are cold, but their guidance is absolute. Reach out to the Architect to decipher your celestial blueprint.
+        </p>
+    </section>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-7xl mx-auto scroll-reveal">
+        <!-- Contact Form Section -->
+        <div class="lg:col-span-7">
+            <div class="glass-panel p-8 md:p-12 rounded-xl relative overflow-hidden tilt-card">
+                <!-- Subtle Glow in background -->
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 blur-[100px] rounded-full"></div>
+                <form class="space-y-8 relative z-10" id="inquiryForm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Full Name</label>
+                            <input required class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-on-surface placeholder:opacity-30 font-label-sm" placeholder="ARCHIVE_NAME" type="text"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Email Address</label>
+                            <input required class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-on-surface placeholder:opacity-30 font-label-sm" placeholder="COMM_ID@COSMOS.ORG" type="email"/>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="space-y-2">
+                            <label class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Birth Date</label>
+                            <input required class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-on-surface font-label-sm" type="date"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Time of Birth (Opt)</label>
+                            <input class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-on-surface font-label-sm" type="time"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Location of Birth</label>
+                            <input required class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-on-surface placeholder:opacity-30 font-label-sm" placeholder="COORDINATES" type="text"/>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Your Inquiry</label>
+                        <textarea required class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-on-surface placeholder:opacity-30 font-label-sm" placeholder="TRANSMIT YOUR INTENT..." rows="4"></textarea>
+                    </div>
+                    <div class="pt-4">
+                        <button class="w-full group bg-primary text-on-primary py-4 rounded-lg font-headline-md text-headline-md tracking-wider flex items-center justify-center gap-3 transition-all duration-500 hover:shadow-[0_0_40px_rgba(157,92,255,0.4)]" type="submit">
+                            Send My Inquiry
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-2" data-icon="send">send</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Sidebar Info Section -->
+        <div class="lg:col-span-5 flex flex-col gap-8">
+            <!-- Info Card -->
+            <div class="glass-panel p-8 rounded-xl space-y-6 tilt-card">
+                <h3 class="font-headline-md text-headline-md text-primary">Direct Channels</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+                        </div>
+                        <div>
+                            <p class="font-label-sm text-label-sm text-outline">Transmission</p>
+                            <p class="font-body-md text-body-md">architect@thecosmiccode.io</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined" data-icon="share">share</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a class="font-body-md text-body-md hover:text-secondary-fixed-dim transition-colors underline decoration-secondary-fixed-dim/30" href="#">Instagram</a>
+                            <a class="font-body-md text-body-md hover:text-secondary-fixed-dim transition-colors underline decoration-secondary-fixed-dim/30" href="#">Twitter/X</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="space-y-6">
+                <h3 class="font-headline-md text-headline-md text-on-surface">Transmission Protocol (FAQ)</h3>
+                <div class="space-y-4">
+                    <details class="glass-panel group rounded-lg p-4 cursor-pointer tilt-card">
+                        <summary class="list-none flex justify-between items-center font-body-md font-semibold text-on-surface">
+                            How long until my inquiry is decrypted?
+                            <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+                        </summary>
+                        <div class="mt-4 text-on-surface-variant font-body-md border-t border-white/5 pt-4">
+                            Most inquiries are processed within 2-3 lunar cycles (48-72 Earth hours). Premium readings receive priority transmission.
+                        </div>
+                    </details>
+                    <details class="glass-panel group rounded-lg p-4 cursor-pointer tilt-card">
+                        <summary class="list-none flex justify-between items-center font-body-md font-semibold text-on-surface">
+                            Do I need my exact birth time?
+                            <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+                        </summary>
+                        <div class="mt-4 text-on-surface-variant font-body-md border-t border-white/5 pt-4">
+                            Precise timing ensures a clearer resonance with the galactic grid, but a general approximation is acceptable for preliminary scans.
+                        </div>
+                    </details>
+                    <details class="glass-panel group rounded-lg p-4 cursor-pointer tilt-card">
+                        <summary class="list-none flex justify-between items-center font-body-md font-semibold text-on-surface">
+                            Secure Transmissions?
+                            <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+                        </summary>
+                        <div class="mt-4 text-on-surface-variant font-body-md border-t border-white/5 pt-4">
+                            All data is encrypted via celestial hashing and remains private between you and the Architect. No star-charts are sold to third-party entities.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            
+            <!-- Visual Element -->
+            <div class="relative h-48 rounded-xl overflow-hidden glass-panel flex items-center justify-center tilt-card">
+                <img alt="Cosmic Nebula background graphic" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2X8X0TOB31NQKAIkxc-00_LtD96ZVe0vOJvq5VDVcZUAXoRqTHhfshyFeXV2kfIEUYwcANMOa4Dwgqs8P6fsisQk0ri2OWMCHMOY2iA94sQ0XGkkSaeQ4eBUEkoxbnBh3mTSedsfR1hlQ6VyXO6vO7IAnm1JpVdh4x6rxoFf55KQBK8E8NXttsfU3vGsEO4pdf7s9IIoeGjA8f7i2BZqmpbQg6SjpbaSJh3clK0ly4yv2uSCRclds-kedrlLRZUnrnxs5y87zKlMJ"/>
+                <div class="relative z-10 text-center">
+                    <div class="orbital-loader mx-auto mb-4">
+                        <div class="w-2 h-2 bg-secondary-fixed-dim rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+                        <div class="orbital-dot"></div>
+                    </div>
+                    <p class="font-label-sm text-label-sm text-primary tracking-widest uppercase">System Online</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8 bg-surface-container-lowest border-t border-white/5">
+    <div class="font-headline-md text-headline-md text-secondary-fixed-dim">The Cosmic Code</div>
+    <div class="flex gap-8">
+        <a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors" href="#">Instagram</a>
+        <a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors" href="#">Twitter</a>
+        <a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors" href="contact.html">Contact</a>
+        <a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors" href="#">Privacy</a>
+    </div>
+    <div class="font-label-sm text-label-sm text-outline opacity-80">© 2024 The Cosmic Code | The Cosmic Architect</div>
+</footer>
+
+<script>
+    // Star Field Generator
+    const container = document.getElementById('star-container');
+    const starCount = 100;
+
+    for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        const size = Math.random() * 2 + 1;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.setProperty('--duration', `${Math.random() * 3 + 2}s`);
+        container.appendChild(star);
+    }
+
+    // Dynamic Custom Cursor with Momentum / Elasticity
+    const cursor = document.getElementById('cosmic-cursor');
+    const cursorDot = document.getElementById('cosmic-cursor-dot');
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+    let dotX = 0, dotY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateCursor() {
+        cursorX += (mouseX - cursorX) * 0.12;
+        cursorY += (mouseY - cursorY) * 0.12;
+        dotX += (mouseX - dotX) * 0.25;
+        dotY += (mouseY - dotY) * 0.25;
+
+        if (cursor) {
+            cursor.style.left = `${cursorX}px`;
+            cursor.style.top = `${cursorY}px`;
+        }
+        if (cursorDot) {
+            cursorDot.style.left = `${dotX}px`;
+            cursorDot.style.top = `${dotY}px`;
+        }
+
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Hover scales and glows
+    const clickables = document.querySelectorAll('a, button, input, textarea, select, details, summary');
+    clickables.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            if (cursor) {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.6)';
+                cursor.style.backgroundColor = 'rgba(0, 219, 233, 0.15)';
+                cursor.style.borderColor = '#00dbe9';
+                cursor.style.boxShadow = '0 0 20px rgba(0, 219, 233, 0.6)';
+            }
+        });
+        el.addEventListener('mouseleave', () => {
+            if (cursor) {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.backgroundColor = 'rgba(214, 186, 255, 0.1)';
+                cursor.style.borderColor = '#d6baff';
+                cursor.style.boxShadow = '0 0 15px rgba(214, 186, 255, 0.4)';
+            }
+        });
+    });
+
+    // Mobile Navigation overlay toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+    if (mobileMenuBtn && mobileMenuOverlay) {
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenuOverlay.classList.contains('translate-x-0');
+            if (isOpen) {
+                mobileMenuOverlay.classList.remove('translate-x-0');
+                mobileMenuOverlay.classList.add('translate-x-full');
+                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">menu</span>';
+            } else {
+                mobileMenuOverlay.classList.remove('translate-x-full');
+                mobileMenuOverlay.classList.add('translate-x-0');
+                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">close</span>';
+            }
+        });
+
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuOverlay.classList.remove('translate-x-0');
+                mobileMenuOverlay.classList.add('translate-x-full');
+                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">menu</span>';
+            });
+        });
+    }
+
+    // Form interaction
+    const form = document.getElementById('inquiryForm');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('button');
+        
+        btn.innerHTML = `<div class="orbital-loader h-6 w-6"><div class="orbital-dot !w-2 !h-2"></div></div> TRANSMITTING...`;
+        btn.disabled = true;
+
+        setTimeout(() => {
+            btn.innerHTML = `TRANSMISSION RECEIVED <span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>`;
+            btn.classList.remove('bg-primary');
+            btn.classList.add('bg-tertiary', 'text-on-tertiary');
+            form.reset();
+        }, 2500);
+    });
+
+    // Dynamic 3D Card Tilting (relative to each card's center)
+    const tiltCards = document.querySelectorAll('.tilt-card');
+    tiltCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const cardX = e.clientX - rect.left;
+            const cardY = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const tiltX = ((cardY - centerY) / centerY) * -6;
+            const tiltY = ((cardX - centerX) / centerX) * 6;
+            
+            card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.02)`;
+            card.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(214, 186, 255, 0.1)';
+            card.style.transition = 'transform 0.1s ease, box-shadow 0.1s ease';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+            card.style.boxShadow = 'none';
+            card.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
+        });
+    });
+
+    // Cursor-Responsive Ambient Background Nebulas
+    document.addEventListener('mousemove', (e) => {
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        
+        const nebulas = document.querySelectorAll('.nebula-glow');
+        nebulas.forEach((nebula, index) => {
+            const speed = (index + 1) * 30;
+            const moveX = (x - 0.5) * speed;
+            const moveY = (y - 0.5) * speed;
+            nebula.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+    });
+
+    // Cinematic Viewport Scroll Reveals
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, {
+        threshold: 0.05
+    });
+
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
+</script>
+</body>
+</html>

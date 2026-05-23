@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meet the Cosmic Architect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:wght@100..900&amp;family=JetBrains+Mono:wght@100..800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#e9c400",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#e1e2eb",
+                        "background": "#10131a",
+                        "on-primary": "#420089",
+                        "on-primary-container": "#3a0079",
+                        "on-secondary-fixed-variant": "#544600",
+                        "outline-variant": "#4b4454",
+                        "surface-bright": "#363940",
+                        "on-surface": "#e1e2eb",
+                        "surface-variant": "#32353c",
+                        "tertiary-fixed-dim": "#00dbe9",
+                        "surface-container-high": "#272a31",
+                        "inverse-primary": "#7832d9",
+                        "on-secondary-fixed": "#221b00",
+                        "tertiary": "#00dbe9",
+                        "surface-container-highest": "#32353c",
+                        "surface-tint": "#d6baff",
+                        "primary-fixed": "#ecdcff",
+                        "on-surface-variant": "#cdc2d7",
+                        "surface-container-lowest": "#0b0e14",
+                        "inverse-on-surface": "#2e3037",
+                        "primary-container": "#aa73ff",
+                        "surface": "#10131a",
+                        "on-tertiary-fixed": "#002022",
+                        "on-tertiary": "#00363a",
+                        "on-tertiary-container": "#002f33",
+                        "on-secondary": "#3a3000",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#10131a",
+                        "on-background": "#e1e2eb",
+                        "primary-fixed-dim": "#d6baff",
+                        "on-error": "#690005",
+                        "on-secondary-container": "#725f00",
+                        "surface-container": "#1d2026",
+                        "error-container": "#93000a",
+                        "primary": "#d6baff",
+                        "on-primary-fixed": "#280057",
+                        "secondary": "#fff9ef",
+                        "surface-container-low": "#191c22",
+                        "on-primary-fixed-variant": "#5f00c0",
+                        "tertiary-container": "#00a0aa",
+                        "secondary-fixed": "#ffe16d",
+                        "tertiary-fixed": "#7df4ff",
+                        "on-tertiary-fixed-variant": "#004f54",
+                        "outline": "#968da0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "max-width": "1440px",
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bodoni Moda"],
+                        "headline-display": ["Bodoni Moda"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #10131a;
+            color: #e1e2eb;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .orbital {
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* New Hero Vortex Animations */
+        @keyframes vortex-rotate {
+            from { transform: scale(1.5) rotate(0deg); }
+            to { transform: scale(1.5) rotate(360deg); }
+        }
+        @keyframes vortex-pulse {
+            0%, 100% { filter: brightness(1) contrast(1.1) drop-shadow(0 0 20px rgba(214, 186, 255, 0.2)); }
+            50% { filter: brightness(1.3) contrast(1.2) drop-shadow(0 0 40px rgba(214, 186, 255, 0.4)); }
+        }
+        .animate-vortex {
+            animation: vortex-rotate 5s linear infinite, vortex-pulse 4s ease-in-out infinite;
+            transform-origin: center center;
+        }
+
+        .starlight-glow:hover {
+            box-shadow: 0 0 30px rgba(214, 186, 255, 0.3);
+        }
+
+        /* Star Field Styles - Updated z-index */
+        #star-field {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5; /* Above background/hero image, below content/nav */
+        }
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: drift var(--duration) linear infinite;
+        }
+        @keyframes drift {
+            from { transform: translateY(0); }
+            to { transform: translateY(-100vh); }
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary selection:text-on-primary">
+<!-- Star Field Container -->
+<div id="star-field"><div class="star" style="width: 1.75125px; height: 1.75125px; left: 78.6854%; top: 29.3545%; opacity: 0.445256; --duration: 43.05107868692672s; animation-delay: -7.50379s;"></div><div class="star" style="width: 1.26615px; height: 1.26615px; left: 2.01629%; top: 0.0042833%; opacity: 0.665835; --duration: 45.912830976779716s; animation-delay: -8.50083s;"></div><div class="star" style="width: 2.79064px; height: 2.79064px; left: 44.7982%; top: 88.8076%; opacity: 0.643515; --duration: 46.385571577241606s; animation-delay: -6.3582s;"></div><div class="star" style="width: 2.47628px; height: 2.47628px; left: 41.7966%; top: 96.967%; opacity: 0.692549; --duration: 37.35443246551701s; animation-delay: -5.65011s;"></div><div class="star" style="width: 2.07273px; height: 2.07273px; left: 54.1444%; top: 67.1564%; opacity: 0.256431; --duration: 34.7867263276285s; animation-delay: -29.6282s;"></div><div class="star" style="width: 2.41664px; height: 2.41664px; left: 37.6603%; top: 33.4824%; opacity: 0.203394; --duration: 37.068007722039s; animation-delay: -28.3939s;"></div><div class="star" style="width: 2.36424px; height: 2.36424px; left: 27.1488%; top: 6.1554%; opacity: 0.347795; --duration: 34.71375168113798s; animation-delay: -47.0895s;"></div><div class="star" style="width: 1.97328px; height: 1.97328px; left: 81.1114%; top: 22.41%; opacity: 0.579548; --duration: 42.422782179663145s; animation-delay: -43.7613s;"></div><div class="star" style="width: 1.37997px; height: 1.37997px; left: 36.8721%; top: 87.3968%; opacity: 0.247729; --duration: 45.29420882233933s; animation-delay: -9.09093s;"></div><div class="star" style="width: 1.47055px; height: 1.47055px; left: 99.0531%; top: 83.0952%; opacity: 0.668502; --duration: 28.42148030707824s; animation-delay: -36.1267s;"></div><div class="star" style="width: 2.67057px; height: 2.67057px; left: 74.3776%; top: 98.811%; opacity: 0.352383; --duration: 35.02807650404607s; animation-delay: -27.0549s;"></div><div class="star" style="width: 1.76372px; height: 1.76372px; left: 1.25793%; top: 40.559%; opacity: 0.27277; --duration: 25.231604540155526s; animation-delay: -41.3374s;"></div><div class="star" style="width: 1.86243px; height: 1.86243px; left: 62.6473%; top: 23.5729%; opacity: 0.238733; --duration: 49.142780789045425s; animation-delay: -18.3022s;"></div><div class="star" style="width: 1.83112px; height: 1.83112px; left: 9.3456%; top: 12.6681%; opacity: 0.292585; --duration: 35.22167303081453s; animation-delay: -17.4182s;"></div><div class="star" style="width: 2.60068px; height: 2.60068px; left: 96.0732%; top: 45.0621%; opacity: 0.416704; --duration: 49.48470296302589s; animation-delay: -32.4767s;"></div><div class="star" style="width: 2.84641px; height: 2.84641px; left: 89.589%; top: 78.7877%; opacity: 0.598703; --duration: 26.891420360778667s; animation-delay: -33.745s;"></div><div class="star" style="width: 2.74537px; height: 2.74537px; left: 29.1266%; top: 10.0576%; opacity: 0.627337; --duration: 46.650948174273026s; animation-delay: -18.4994s;"></div><div class="star" style="width: 1.3361px; height: 1.3361px; left: 81.4961%; top: 48.413%; opacity: 0.673321; --duration: 43.53592939395803s; animation-delay: -34.9648s;"></div><div class="star" style="width: 1.5536px; height: 1.5536px; left: 42.9058%; top: 97.8112%; opacity: 0.622185; --duration: 40.982766735750175s; animation-delay: -28.2939s;"></div><div class="star" style="width: 2.4596px; height: 2.4596px; left: 36.1422%; top: 95.0556%; opacity: 0.464571; --duration: 31.682376268465646s; animation-delay: -40.297s;"></div><div class="star" style="width: 2.60955px; height: 2.60955px; left: 85.4257%; top: 11.17%; opacity: 0.587117; --duration: 31.120067159850763s; animation-delay: -22.7946s;"></div><div class="star" style="width: 2.74316px; height: 2.74316px; left: 90.6297%; top: 10.2834%; opacity: 0.634989; --duration: 42.78467692463448s; animation-delay: -7.64407s;"></div><div class="star" style="width: 2.46357px; height: 2.46357px; left: 59.5885%; top: 24.2856%; opacity: 0.385211; --duration: 32.841949052802555s; animation-delay: -31.6768s;"></div><div class="star" style="width: 1.91804px; height: 1.91804px; left: 93.0559%; top: 6.57646%; opacity: 0.669285; --duration: 41.21269543463265s; animation-delay: -8.46871s;"></div><div class="star" style="width: 1.50963px; height: 1.50963px; left: 0.739221%; top: 20.2989%; opacity: 0.528718; --duration: 22.687161645981583s; animation-delay: -49.9876s;"></div><div class="star" style="width: 2.20822px; height: 2.20822px; left: 65.8172%; top: 55.6375%; opacity: 0.53295; --duration: 31.727978571407654s; animation-delay: -42.1305s;"></div><div class="star" style="width: 2.48964px; height: 2.48964px; left: 72.5768%; top: 66.3166%; opacity: 0.308935; --duration: 27.508069207992556s; animation-delay: -45.7943s;"></div><div class="star" style="width: 1.40918px; height: 1.40918px; left: 48.0981%; top: 36.1241%; opacity: 0.409605; --duration: 30.029367075735777s; animation-delay: -4.25903s;"></div><div class="star" style="width: 1.27908px; height: 1.27908px; left: 27.4089%; top: 89.2019%; opacity: 0.429932; --duration: 37.64832119815071s; animation-delay: -10.0105s;"></div><div class="star" style="width: 1.26373px; height: 1.26373px; left: 59.1747%; top: 88.9177%; opacity: 0.499419; --duration: 40.41141885555061s; animation-delay: -23.1975s;"></div><div class="star" style="width: 2.13547px; height: 2.13547px; left: 60.4279%; top: 97.5307%; opacity: 0.254366; --duration: 41.77450745241456s; animation-delay: -12.0149s;"></div><div class="star" style="width: 1.37583px; height: 1.37583px; left: 25.072%; top: 59.8789%; opacity: 0.205941; --duration: 46.54097420777457s; animation-delay: -14.4583s;"></div><div class="star" style="width: 1.37087px; height: 1.37087px; left: 91.0618%; top: 65.4904%; opacity: 0.21156; --duration: 35.91386335857852s; animation-delay: -23.3983s;"></div><div class="star" style="width: 2.65977px; height: 2.65977px; left: 34.0733%; top: 28.1924%; opacity: 0.350777; --duration: 43.38807138733493s; animation-delay: -40.3756s;"></div><div class="star" style="width: 1.27443px; height: 1.27443px; left: 15.838%; top: 98.4623%; opacity: 0.419065; --duration: 30.937982066142567s; animation-delay: -35.8135s;"></div><div class="star" style="width: 1.12253px; height: 1.12253px; left: 35.862%; top: 57.4629%; opacity: 0.236844; --duration: 30.746474773791036s; animation-delay: -24.2752s;"></div><div class="star" style="width: 2.02796px; height: 2.02796px; left: 37.8716%; top: 50.8833%; opacity: 0.319296; --duration: 23.884947302235094s; animation-delay: -45.7472s;"></div><div class="star" style="width: 1.73264px; height: 1.73264px; left: 43.7858%; top: 54.5625%; opacity: 0.275611; --duration: 28.581751802077427s; animation-delay: -3.49272s;"></div><div class="star" style="width: 1.04133px; height: 1.04133px; left: 55.505%; top: 92.7642%; opacity: 0.402107; --duration: 43.43907569123131s; animation-delay: -24.0595s;"></div><div class="star" style="width: 1.6774px; height: 1.6774px; left: 20.2351%; top: 63.3053%; opacity: 0.525905; --duration: 47.80039720571976s; animation-delay: -19.5575s;"></div><div class="star" style="width: 2.20519px; height: 2.20519px; left: 75.6406%; top: 19.3099%; opacity: 0.603695; --duration: 29.364928746895252s; animation-delay: -18.6383s;"></div><div class="star" style="width: 1.81428px; height: 1.81428px; left: 53.4315%; top: 53.6878%; opacity: 0.477747; --duration: 30.19318006758016s; animation-delay: -9.2652s;"></div><div class="star" style="width: 1.00636px; height: 1.00636px; left: 2.61655%; top: 94.7202%; opacity: 0.323449; --duration: 24.838215999764387s; animation-delay: -41.5694s;"></div><div class="star" style="width: 1.52733px; height: 1.52733px; left: 64.0269%; top: 48.06%; opacity: 0.616544; --duration: 25.89133736003356s; animation-delay: -23.0027s;"></div><div class="star" style="width: 2.79952px; height: 2.79952px; left: 25.2189%; top: 13.1685%; opacity: 0.424343; --duration: 24.558107636269945s; animation-delay: -15.0955s;"></div><div class="star" style="width: 1.86494px; height: 1.86494px; left: 79.767%; top: 72.6609%; opacity: 0.608343; --duration: 21.164006678445606s; animation-delay: -27.5003s;"></div><div class="star" style="width: 2.46029px; height: 2.46029px; left: 9.50166%; top: 7.77301%; opacity: 0.441269; --duration: 25.75601007474582s; animation-delay: -10.4421s;"></div><div class="star" style="width: 1.18356px; height: 1.18356px; left: 44.4298%; top: 23.7584%; opacity: 0.595423; --duration: 25.178533359183064s; animation-delay: -21.6864s;"></div><div class="star" style="width: 1.01129px; height: 1.01129px; left: 99.1204%; top: 87.1448%; opacity: 0.608384; --duration: 40.37126732239177s; animation-delay: -12.3426s;"></div><div class="star" style="width: 2.7664px; height: 2.7664px; left: 22.6058%; top: 77.7406%; opacity: 0.239417; --duration: 21.250991176793022s; animation-delay: -2.26577s;"></div><div class="star" style="width: 2.14582px; height: 2.14582px; left: 74.0052%; top: 39.9708%; opacity: 0.535452; --duration: 28.626168834558392s; animation-delay: -16.584s;"></div><div class="star" style="width: 1.25196px; height: 1.25196px; left: 51.2448%; top: 70.5682%; opacity: 0.652195; --duration: 37.26959985385257s; animation-delay: -29.9466s;"></div><div class="star" style="width: 2.14655px; height: 2.14655px; left: 38.4194%; top: 65.3183%; opacity: 0.516881; --duration: 30.84516224474893s; animation-delay: -4.81014s;"></div><div class="star" style="width: 1.60647px; height: 1.60647px; left: 69.3225%; top: 39.9836%; opacity: 0.389451; --duration: 46.71225616127762s; animation-delay: -5.92145s;"></div><div class="star" style="width: 1.88006px; height: 1.88006px; left: 63.8419%; top: 95.8881%; opacity: 0.221786; --duration: 29.214965726347074s; animation-delay: -7.85963s;"></div><div class="star" style="width: 2.44064px; height: 2.44064px; left: 52.3915%; top: 61.1835%; opacity: 0.405861; --duration: 45.85794947255756s; animation-delay: -48.0498s;"></div><div class="star" style="width: 1.26795px; height: 1.26795px; left: 57.9809%; top: 37.9814%; opacity: 0.535581; --duration: 22.05650417266148s; animation-delay: -9.74819s;"></div><div class="star" style="width: 1.55247px; height: 1.55247px; left: 63.1407%; top: 14.4957%; opacity: 0.245764; --duration: 39.43093557944836s; animation-delay: -18.5247s;"></div><div class="star" style="width: 2.71464px; height: 2.71464px; left: 10.3878%; top: 2.35367%; opacity: 0.336659; --duration: 46.55739222861325s; animation-delay: -21.6301s;"></div><div class="star" style="width: 2.79728px; height: 2.79728px; left: 23.7534%; top: 41.4766%; opacity: 0.233728; --duration: 42.383501181680394s; animation-delay: -48.9235s;"></div><div class="star" style="width: 1.62481px; height: 1.62481px; left: 16.7253%; top: 60.4478%; opacity: 0.612805; --duration: 46.31143134409449s; animation-delay: -4.07297s;"></div><div class="star" style="width: 1.5239px; height: 1.5239px; left: 70.9307%; top: 72.2709%; opacity: 0.433348; --duration: 40.874020969075836s; animation-delay: -16.0317s;"></div><div class="star" style="width: 2.19537px; height: 2.19537px; left: 41.0631%; top: 71.7862%; opacity: 0.293713; --duration: 36.977729474594355s; animation-delay: -43.2368s;"></div><div class="star" style="width: 1.86351px; height: 1.86351px; left: 95.1057%; top: 88.6353%; opacity: 0.308769; --duration: 48.20523030244441s; animation-delay: -44.9965s;"></div><div class="star" style="width: 1.85374px; height: 1.85374px; left: 38.211%; top: 89.6104%; opacity: 0.350764; --duration: 28.691300334433457s; animation-delay: -37.3227s;"></div><div class="star" style="width: 2.42952px; height: 2.42952px; left: 48.3646%; top: 79.2681%; opacity: 0.593069; --duration: 26.93113624038606s; animation-delay: -14.1994s;"></div><div class="star" style="width: 2.02835px; height: 2.02835px; left: 59.2605%; top: 33.0518%; opacity: 0.414406; --duration: 26.018488985071553s; animation-delay: -35.6374s;"></div><div class="star" style="width: 1.21328px; height: 1.21328px; left: 4.01466%; top: 0.934242%; opacity: 0.507878; --duration: 36.45154921999493s; animation-delay: -47.5163s;"></div><div class="star" style="width: 1.50566px; height: 1.50566px; left: 54.0948%; top: 71.9882%; opacity: 0.494343; --duration: 44.15996148987128s; animation-delay: -16.3s;"></div><div class="star" style="width: 2.32599px; height: 2.32599px; left: 37.3653%; top: 9.41645%; opacity: 0.480907; --duration: 25.16823941379939s; animation-delay: -10.6659s;"></div><div class="star" style="width: 1.04802px; height: 1.04802px; left: 14.6648%; top: 42.1527%; opacity: 0.66963; --duration: 31.516450140976353s; animation-delay: -10.5696s;"></div><div class="star" style="width: 2.73918px; height: 2.73918px; left: 37.5843%; top: 36.2094%; opacity: 0.278687; --duration: 29.52662372235325s; animation-delay: -28.9209s;"></div><div class="star" style="width: 1.83122px; height: 1.83122px; left: 52.4922%; top: 20.4948%; opacity: 0.490293; --duration: 25.185008629746633s; animation-delay: -47.7016s;"></div><div class="star" style="width: 1.88933px; height: 1.88933px; left: 31.5154%; top: 45.0541%; opacity: 0.540123; --duration: 43.04246288758384s; animation-delay: -17.2694s;"></div><div class="star" style="width: 2.59567px; height: 2.59567px; left: 36.43%; top: 86.2324%; opacity: 0.391198; --duration: 27.11007203170928s; animation-delay: -39.922s;"></div><div class="star" style="width: 2.7933px; height: 2.7933px; left: 42.7378%; top: 68.6648%; opacity: 0.207315; --duration: 35.820248963429336s; animation-delay: -0.302116s;"></div><div class="star" style="width: 2.68531px; height: 2.68531px; left: 28.8741%; top: 95.8636%; opacity: 0.655989; --duration: 25.550940578673373s; animation-delay: -36.0835s;"></div><div class="star" style="width: 2.71518px; height: 2.71518px; left: 42.3595%; top: 55.7063%; opacity: 0.491325; --duration: 28.6747466450338s; animation-delay: -33.0538s;"></div><div class="star" style="width: 2.96007px; height: 2.96007px; left: 28.0106%; top: 53.6838%; opacity: 0.610993; --duration: 40.36052184196821s; animation-delay: -5.28334s;"></div><div class="star" style="width: 2.02661px; height: 2.02661px; left: 75.5335%; top: 57.0903%; opacity: 0.518828; --duration: 29.59970297340836s; animation-delay: -14.8786s;"></div><div class="star" style="width: 1.80144px; height: 1.80144px; left: 9.29523%; top: 39.464%; opacity: 0.244632; --duration: 22.443623706409827s; animation-delay: -19.0727s;"></div><div class="star" style="width: 2.23591px; height: 2.23591px; left: 33.7862%; top: 58.7439%; opacity: 0.541102; --duration: 40.79653779380043s; animation-delay: -9.10196s;"></div><div class="star" style="width: 1.28833px; height: 1.28833px; left: 47.382%; top: 33.0925%; opacity: 0.496594; --duration: 36.81038183970574s; animation-delay: -11.0395s;"></div><div class="star" style="width: 2.524px; height: 2.524px; left: 80.3868%; top: 85.6429%; opacity: 0.616855; --duration: 25.698441946818363s; animation-delay: -29.964s;"></div><div class="star" style="width: 1.18365px; height: 1.18365px; left: 66.0313%; top: 96.0993%; opacity: 0.677542; --duration: 25.27054116129562s; animation-delay: -24.9404s;"></div><div class="star" style="width: 1.63823px; height: 1.63823px; left: 86.5466%; top: 87.3054%; opacity: 0.562771; --duration: 47.378226844282416s; animation-delay: -18.7922s;"></div><div class="star" style="width: 1.99948px; height: 1.99948px; left: 61.2034%; top: 30.0538%; opacity: 0.574855; --duration: 41.775531242307366s; animation-delay: -26.1657s;"></div><div class="star" style="width: 1.80933px; height: 1.80933px; left: 45.6405%; top: 7.59542%; opacity: 0.209281; --duration: 25.661887717191433s; animation-delay: -8.92125s;"></div><div class="star" style="width: 1.92863px; height: 1.92863px; left: 48.4712%; top: 75.166%; opacity: 0.315822; --duration: 26.111095179461213s; animation-delay: -39.0883s;"></div><div class="star" style="width: 1.67939px; height: 1.67939px; left: 72.9892%; top: 4.51015%; opacity: 0.220138; --duration: 27.720216146885733s; animation-delay: -29.3774s;"></div><div class="star" style="width: 2.79099px; height: 2.79099px; left: 49.9258%; top: 57.4608%; opacity: 0.651317; --duration: 39.30390312759597s; animation-delay: -22.88s;"></div><div class="star" style="width: 1.80139px; height: 1.80139px; left: 53.6461%; top: 23.4987%; opacity: 0.40996; --duration: 40.220448530795785s; animation-delay: -26.7522s;"></div><div class="star" style="width: 1.90662px; height: 1.90662px; left: 31.5991%; top: 26.568%; opacity: 0.629924; --duration: 29.05592852054693s; animation-delay: -22.4523s;"></div><div class="star" style="width: 2.76387px; height: 2.76387px; left: 85.342%; top: 62.7306%; opacity: 0.290184; --duration: 22.500931705047467s; animation-delay: -23.6953s;"></div><div class="star" style="width: 1.67295px; height: 1.67295px; left: 35.3994%; top: 92.2007%; opacity: 0.307372; --duration: 26.016218484719243s; animation-delay: -34.4488s;"></div><div class="star" style="width: 2.23392px; height: 2.23392px; left: 15.9157%; top: 48.0602%; opacity: 0.214823; --duration: 22.699401265789888s; animation-delay: -27.6s;"></div><div class="star" style="width: 1.77202px; height: 1.77202px; left: 31.7643%; top: 92.4651%; opacity: 0.653258; --duration: 28.813927249567293s; animation-delay: -36.3127s;"></div><div class="star" style="width: 1.8404px; height: 1.8404px; left: 20.7489%; top: 86.8549%; opacity: 0.667385; --duration: 25.604587905186456s; animation-delay: -47.5368s;"></div><div class="star" style="width: 2.78439px; height: 2.78439px; left: 95.3412%; top: 62.7794%; opacity: 0.455474; --duration: 33.92608268500158s; animation-delay: -38.3264s;"></div><div class="star" style="width: 1.70761px; height: 1.70761px; left: 41.0261%; top: 9.56838%; opacity: 0.241761; --duration: 36.120977037044895s; animation-delay: -39.8931s;"></div><div class="star" style="width: 2.17084px; height: 2.17084px; left: 20.4555%; top: 52.6678%; opacity: 0.276781; --duration: 37.85249964187557s; animation-delay: -19.1057s;"></div><div class="star" style="width: 1.35529px; height: 1.35529px; left: 34.214%; top: 71.3041%; opacity: 0.217225; --duration: 27.157591291505017s; animation-delay: -4.76282s;"></div><div class="star" style="width: 2.90665px; height: 2.90665px; left: 13.5237%; top: 70.0859%; opacity: 0.612594; --duration: 34.48112439387957s; animation-delay: -43.2196s;"></div><div class="star" style="width: 1.04623px; height: 1.04623px; left: 28.8173%; top: 15.6931%; opacity: 0.670004; --duration: 20.116447397239206s; animation-delay: -8.19658s;"></div><div class="star" style="width: 2.45145px; height: 2.45145px; left: 80.4261%; top: 81.6015%; opacity: 0.591085; --duration: 45.897543066857196s; animation-delay: -5.50044s;"></div><div class="star" style="width: 2.12229px; height: 2.12229px; left: 74.9428%; top: 63.3115%; opacity: 0.384084; --duration: 37.491065200079646s; animation-delay: -1.3672s;"></div><div class="star" style="width: 1.55188px; height: 1.55188px; left: 32.3697%; top: 78.8459%; opacity: 0.483497; --duration: 26.029797913523588s; animation-delay: -43.0469s;"></div><div class="star" style="width: 1.20876px; height: 1.20876px; left: 97.5869%; top: 19.5218%; opacity: 0.283218; --duration: 35.68340291739658s; animation-delay: -15.5082s;"></div><div class="star" style="width: 1.77066px; height: 1.77066px; left: 78.5727%; top: 3.36071%; opacity: 0.433712; --duration: 22.908899847172506s; animation-delay: -8.5775s;"></div><div class="star" style="width: 2.24314px; height: 2.24314px; left: 47.1004%; top: 13.2651%; opacity: 0.357286; --duration: 30.714333495355618s; animation-delay: -25.6674s;"></div><div class="star" style="width: 1.2657px; height: 1.2657px; left: 68.1124%; top: 27.7722%; opacity: 0.2262; --duration: 27.427014503576302s; animation-delay: -25.4813s;"></div><div class="star" style="width: 1.49622px; height: 1.49622px; left: 75.8792%; top: 54.3041%; opacity: 0.537612; --duration: 31.339390314717882s; animation-delay: -20.2682s;"></div><div class="star" style="width: 2.09726px; height: 2.09726px; left: 34.2843%; top: 12.5201%; opacity: 0.667276; --duration: 34.365081085859956s; animation-delay: -47.525s;"></div><div class="star" style="width: 2.9079px; height: 2.9079px; left: 64.0776%; top: 54.1021%; opacity: 0.581213; --duration: 35.157665039181325s; animation-delay: -15.4982s;"></div><div class="star" style="width: 1.62077px; height: 1.62077px; left: 17.6117%; top: 2.53791%; opacity: 0.217872; --duration: 38.51986746362225s; animation-delay: -34.3824s;"></div><div class="star" style="width: 1.77127px; height: 1.77127px; left: 2.51086%; top: 28.797%; opacity: 0.328175; --duration: 22.877030669385853s; animation-delay: -23.1618s;"></div><div class="star" style="width: 1.75786px; height: 1.75786px; left: 55.4072%; top: 23.6106%; opacity: 0.351763; --duration: 39.96906036267855s; animation-delay: -42.5147s;"></div><div class="star" style="width: 2.82711px; height: 2.82711px; left: 32.5829%; top: 0.411541%; opacity: 0.382488; --duration: 27.04925812057688s; animation-delay: -32.6191s;"></div><div class="star" style="width: 2.64687px; height: 2.64687px; left: 90.3049%; top: 1.48106%; opacity: 0.551769; --duration: 36.12765312676606s; animation-delay: -8.02648s;"></div><div class="star" style="width: 2.61752px; height: 2.61752px; left: 7.20391%; top: 72.7691%; opacity: 0.332546; --duration: 28.443564920956426s; animation-delay: -36.9587s;"></div><div class="star" style="width: 1.31987px; height: 1.31987px; left: 45.15%; top: 85.4308%; opacity: 0.496961; --duration: 30.29546552431568s; animation-delay: -49.7813s;"></div><div class="star" style="width: 1.07302px; height: 1.07302px; left: 34.275%; top: 34.5421%; opacity: 0.659055; --duration: 47.674646874187715s; animation-delay: -47.3445s;"></div><div class="star" style="width: 1.73505px; height: 1.73505px; left: 55.0629%; top: 5.88232%; opacity: 0.599796; --duration: 41.55443521637953s; animation-delay: -10.639s;"></div><div class="star" style="width: 2.7861px; height: 2.7861px; left: 87.3004%; top: 17.528%; opacity: 0.473383; --duration: 29.236161364023392s; animation-delay: -1.95917s;"></div><div class="star" style="width: 2.43524px; height: 2.43524px; left: 49.1375%; top: 15.9471%; opacity: 0.336555; --duration: 46.79521876788045s; animation-delay: -6.0121s;"></div><div class="star" style="width: 1.45544px; height: 1.45544px; left: 66.3692%; top: 67.5858%; opacity: 0.593149; --duration: 27.942647598072032s; animation-delay: -45.0461s;"></div><div class="star" style="width: 2.47312px; height: 2.47312px; left: 75.872%; top: 53.4633%; opacity: 0.629808; --duration: 26.972561665756707s; animation-delay: -30.076s;"></div><div class="star" style="width: 2.15793px; height: 2.15793px; left: 40.5098%; top: 99.5798%; opacity: 0.286311; --duration: 45.32596379359225s; animation-delay: -35.8319s;"></div><div class="star" style="width: 2.31129px; height: 2.31129px; left: 10.9529%; top: 26.6526%; opacity: 0.35248; --duration: 40.04957492807792s; animation-delay: -47.264s;"></div><div class="star" style="width: 2.67297px; height: 2.67297px; left: 9.8891%; top: 61.6161%; opacity: 0.226875; --duration: 45.799018676090604s; animation-delay: -0.580351s;"></div><div class="star" style="width: 2.17586px; height: 2.17586px; left: 42.874%; top: 57.1075%; opacity: 0.210625; --duration: 31.553192405580468s; animation-delay: -41.9935s;"></div><div class="star" style="width: 1.28599px; height: 1.28599px; left: 6.79116%; top: 15.562%; opacity: 0.311101; --duration: 30.77746733820155s; animation-delay: -19.4605s;"></div><div class="star" style="width: 2.42047px; height: 2.42047px; left: 34.1046%; top: 76.4577%; opacity: 0.509008; --duration: 45.78394082695734s; animation-delay: -48.6383s;"></div><div class="star" style="width: 1.41047px; height: 1.41047px; left: 32.8801%; top: 43.4921%; opacity: 0.563894; --duration: 46.152277681979896s; animation-delay: -49.8335s;"></div><div class="star" style="width: 2.12327px; height: 2.12327px; left: 29.2556%; top: 74.7908%; opacity: 0.272314; --duration: 22.680620620572533s; animation-delay: -37.2572s;"></div><div class="star" style="width: 1.46251px; height: 1.46251px; left: 58.1602%; top: 24.9605%; opacity: 0.41747; --duration: 21.42034275351009s; animation-delay: -6.34622s;"></div><div class="star" style="width: 1.35203px; height: 1.35203px; left: 78.2701%; top: 80.6844%; opacity: 0.661471; --duration: 38.221458829681524s; animation-delay: -41.7093s;"></div><div class="star" style="width: 1.86222px; height: 1.86222px; left: 56.9929%; top: 34.3283%; opacity: 0.459446; --duration: 43.151855477787734s; animation-delay: -0.999975s;"></div><div class="star" style="width: 1.12542px; height: 1.12542px; left: 18.028%; top: 96.7796%; opacity: 0.248075; --duration: 48.23249144450149s; animation-delay: -39.9865s;"></div><div class="star" style="width: 1.98372px; height: 1.98372px; left: 95.5857%; top: 63.4321%; opacity: 0.60208; --duration: 39.73810438876991s; animation-delay: -24.8766s;"></div><div class="star" style="width: 1.14092px; height: 1.14092px; left: 57.0404%; top: 13.7782%; opacity: 0.552981; --duration: 42.616568583604334s; animation-delay: -22.2345s;"></div><div class="star" style="width: 1.67882px; height: 1.67882px; left: 23.4803%; top: 81.8086%; opacity: 0.421068; --duration: 34.596477617500916s; animation-delay: -10.0163s;"></div><div class="star" style="width: 2.89214px; height: 2.89214px; left: 43.2649%; top: 57.5333%; opacity: 0.302927; --duration: 35.529229790272616s; animation-delay: -23.5892s;"></div><div class="star" style="width: 1.97465px; height: 1.97465px; left: 41.4107%; top: 53.29%; opacity: 0.596846; --duration: 44.51034132239513s; animation-delay: -29.8862s;"></div><div class="star" style="width: 1.96767px; height: 1.96767px; left: 65.3691%; top: 27.9377%; opacity: 0.374642; --duration: 40.24679761089611s; animation-delay: -24.625s;"></div><div class="star" style="width: 2.63956px; height: 2.63956px; left: 1.60107%; top: 17.5175%; opacity: 0.66435; --duration: 26.251924071705755s; animation-delay: -6.05301s;"></div><div class="star" style="width: 2.89458px; height: 2.89458px; left: 50.7849%; top: 96.2483%; opacity: 0.588609; --duration: 32.005667827012246s; animation-delay: -0.871292s;"></div><div class="star" style="width: 2.46659px; height: 2.46659px; left: 32.3802%; top: 93.3959%; opacity: 0.420275; --duration: 20.627703198547007s; animation-delay: -2.3193s;"></div><div class="star" style="width: 2.95289px; height: 2.95289px; left: 71.45%; top: 62.408%; opacity: 0.276768; --duration: 38.47974524582659s; animation-delay: -5.25025s;"></div><div class="star" style="width: 2.57296px; height: 2.57296px; left: 38.5135%; top: 53.6638%; opacity: 0.257983; --duration: 22.998323666858095s; animation-delay: -41.1154s;"></div></div>
+<!-- Top Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-white/5 backdrop-blur-3xl border-b border-white/10 shadow-[0_0_20px_rgba(214,186,255,0.1)]">
+<div class="font-headline-md text-headline-md font-bold text-on-surface tracking-wider">The Cosmic Code</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1 transition-all" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">How It Works</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-[0_0_15px_rgba(214,186,255,0.4)]">
+            Book a Reading
+        </button>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full flex flex-col items-center overflow-hidden pt-24">
+<div class="absolute inset-0 z-0 flex items-center justify-center">
+<div class="relative w-full h-full flex items-center justify-center"><img alt="Cosmic Vortex" class="w-full h-auto opacity-100 block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvlsCiWtCU7fgk_WYTierHGCzKi3T1qqaa_8O98hkUgTdq9IaClQOJkTcSKINGMQac5QEdhTD92NanbRe6MrwqkUChATXj7Gfgr10ANh7W1PP4lXH9LrM3I9z78dt7xUU5UE983TM8cc-VuS_Q99Y55RJq7RB0jatYk1tL-i6CD8vA9SD_4CESL9iLX9QTBLpjiCjoGwJHsiyw1fA2DhjonS1BRrjw3lcwcBlpMgxDIWDIyKGUmBhF4njUXqbNO_wmL_X2wPO2qNSi" style="mask-image: linear-gradient(transparent 0%, black 20%, black 80%, transparent 100%);"/><div class="absolute inset-0 bg-[radial-gradient(circle,transparent_30%,#10131a_105%)]"></div><div class="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-[#10131a] via-[#10131a]/60 to-transparent"></div><div class="absolute inset-x-0 bottom-0 h-96 bg-gradient-to-t from-[#10131a] via-[#10131a]/60 to-transparent"></div><div class="absolute inset-y-0 left-0 w-64 bg-gradient-to-r from-[#10131a] to-transparent"></div><div class="absolute inset-y-0 right-0 w-64 bg-gradient-to-l from-[#10131a] to-transparent"></div></div>
+</div>
+<div class="relative z-10 max-w-4xl px-margin-mobile md:px-0 text-center flex flex-col items-center pt-[500px] pb-0">
+<span class="font-label-sm text-label-sm text-tertiary mb-6 tracking-widest uppercase">Ancient Wisdom • Modern Precision</span>
+<h1 class="font-headline-display text-headline-display md:text-6xl text-white mb-6 leading-tight">
+                    Unlock the Geometry <br/>of Your Soul
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
+                    Personalized Numerology and Zodiac insights curated by the Cosmic Architect to reveal your hidden path.
+                </p>
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(214,186,255,0.5)]">
+                    Begin Your Journey
+                </button>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-30 orbital pointer-events-none z-0">
+<div class="w-[600px] h-[600px] border border-white/10 rounded-full flex items-center justify-center">
+<div class="w-4 h-4 bg-primary rounded-full absolute -top-2"></div>
+</div>
+</div></header>
+<main>
+<!-- Section 1: The Architecture of Fate -->
+<section class="py-24 md:py-40 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7">
+<h2 class="font-headline-lg text-headline-lg md:text-5xl mb-8">The Architecture of Fate</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                        The universe is not a series of random events, but a complex, mathematical tapestry woven with purpose. Your life is governed by cosmic blueprints that define your strengths, your shadows, and your ultimate trajectory.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        By decoding the numeric vibrations of your birth and the celestial alignment of the stars, we unveil the hidden structure of your existence. This is not fortune-telling; it is the observation of cosmic geometry.
+                    </p>
+<div class="flex gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">token</span>
+<span class="font-label-sm text-label-sm text-white">Precise Mapping</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-3xl">auto_awesome</span>
+<span class="font-label-sm text-label-sm text-white">Spiritual Clarity</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 relative group">
+<div class="glass-card aspect-square rounded-full flex items-center justify-center p-8 overflow-hidden relative border-primary/20" style="transition-delay: 0ms;">
+<img alt="Cosmic Architecture" class="w-full h-full object-cover rounded-full mix-blend-screen opacity-80 transition-transform duration-700 group-hover:scale-110" data-alt="A deep space nebula with vibrant violets and teals, spiraling in a golden ratio pattern that suggests architectural structure and intentional design. The image is crisp, modern, and highly atmospheric with sharp star points." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz0CRYXkwzCFpX0LOsvB6nvgqQSReQyjVeLJEHw8Tl8oSwwiabALQulM4ynpl8VO_cTy1F5j1XXYfK3hR2Xzg1FeCgtIhQo4JwQi3GEooL2ywt9iY12IWAr5f4OSSKRbMiIBiNrYaAJae50WQadIWtYjzZqYLho98mo2Z3iVPp7OhlNuY3UonFQ7hzrWb91BFWaWRhmQWqFNusnj3WODiwX3OCfIHjzkc-1IWPq7f5JLyvgncHMbK6EnQ3suoikqoqzg8OOAMGKSCq"/>
+<div class="absolute inset-0 bg-primary/10 rounded-full animate-pulse"></div>
+</div>
+<!-- Small orbiting floating card -->
+<div class="absolute -top-4 -right-4 glass-card p-4 rounded-2xl shadow-xl border-white/20 starlight-glow" style="transition-delay: 50ms;">
+<p class="font-label-sm text-label-sm text-primary">BLUEPRINT V.1.02</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Featured Services (Bento Grid) -->
+<section class="py-24 bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+<div class="max-w-max-width mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Celestial Modalities</h2>
+<p class="font-body-md text-body-md text-outline">Instruments for navigating the unseen.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="glass-card p-8 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 group" style="transition-delay: 100ms;">
+<div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-2xl">public</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Celestial Map</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            A deep-dive into your planetary positions at the exact moment of your arrival. Map the gravity of your future.
+                        </p>
+<a class="text-tertiary flex items-center gap-2 font-label-sm group-hover:gap-4 transition-all" href="#">
+                            EXPLORE THE VOID <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service 2 -->
+<div class="glass-card p-8 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 group border-primary/30" style="transition-delay: 150ms;">
+<div class="w-12 h-12 rounded-xl bg-tertiary/20 flex items-center justify-center mb-6 text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-all">
+<span class="material-symbols-outlined text-2xl">calculate</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Numeric Vibration</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Frequency is the language of the cosmos. Discover the core numbers that dictate your personality and cycles.
+                        </p>
+<a class="text-primary flex items-center gap-2 font-label-sm group-hover:gap-4 transition-all" href="#">
+                            DECODE FREQUENCY <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service 3 -->
+<div class="glass-card p-8 rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 group" style="transition-delay: 200ms;">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed-dim/20 flex items-center justify-center mb-6 text-secondary-fixed-dim group-hover:bg-secondary-fixed-dim group-hover:text-on-secondary-fixed transition-all">
+<span class="material-symbols-outlined text-2xl">balance</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Karmic Alignment</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Understand the spiritual debts and dividends you carry. Align your current actions with your soul's legacy.
+                        </p>
+<a class="text-secondary-fixed-dim flex items-center gap-2 font-label-sm group-hover:gap-4 transition-all" href="#">
+                            RECONCILE FATE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: The Cosmic Architect Teaser -->
+<section class="py-24 md:py-40 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+<div class="w-full h-full bg-gradient-to-l from-primary/30 to-transparent"></div>
+</div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/3">
+<div class="aspect-[3/4] rounded-2xl overflow-hidden glass-card relative border-white/20" style="transition-delay: 250ms;">
+<img alt="A professional and ethereal portrait of a middle-aged woman with a wise and calm expression, representing a 'Cosmic Architect'." class="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 transition-all duration-1000" data-alt="A portrait of a mysterious figure in a dark, high-collared minimalist suit, standing in a room made of glass and starlight. The lighting is dramatic, side-lit, emphasizing sharp silhouettes and a sense of cold precision. The background is a crisp dark space with floating holographic charts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGAzk3hjzcgKs2srBsxiOKRoIQdc8TgMIiroHZEO-5-69WiNhYXOpJi5uYTb30OAdrKi7_P4bPyz0PhxULprbffN2fQBRvKpJQ9u8wkdcjUkhVMdpdGKoLD0PKFe7bQfUhwNkr0WVww7LpQNgxQcvvtofY8mZlPa4KZHq9ZSaFFxtpG5uOCE7He68425GyvmlrJHsN8MZ4Y1xzHktjAwVGinuNM2XAu3_qWsSH854D1clHbeJd4xiWcAEdd97WKO4KPjDsh7Lq4-F5"/>
+</div>
+</div>
+<div class="w-full md:w-2/3">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim mb-4 block">MEET THE OBSERVER</span>
+<h2 class="font-headline-lg text-headline-lg mb-8">The Cosmic Architect</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                            With two decades of research into the intersection of metaphysics and mathematical probability, the Architect provides a clinical yet profound perspective on the spiritual path.
+                        </p>
+<a class="inline-flex items-center gap-4 text-white hover:text-primary transition-colors font-bold text-lg group" href="#">
+                            Explore the Archive 
+                            <span class="w-12 h-px bg-white group-hover:bg-primary group-hover:w-16 transition-all"></span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section: Book Your Consultation -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-5xl mx-auto glass-card rounded-[40px] overflow-hidden relative p-12 md:p-20 text-center" style="transition-delay: 300ms;">
+<div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+<div class="grid grid-cols-6 h-full">
+<div class="border-r border-white/20"></div>
+<div class="border-r border-white/20"></div>
+<div class="border-r border-white/20"></div>
+<div class="border-r border-white/20"></div>
+<div class="border-r border-white/20"></div>
+<div></div>
+</div>
+</div>
+<div class="relative z-10">
+<h2 class="font-headline-display text-headline-display md:text-5xl mb-8">Book Your Consultation</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                        Limited availability for high-fidelity path-finding sessions. Secure your coordinate in the next cosmic cycle.
+                    </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-white text-background px-10 py-4 rounded-full font-bold transition-all hover:bg-primary hover:text-on-primary hover:scale-105">
+                            Check Availability
+                        </button>
+<button class="border border-white/20 text-white px-10 py-4 rounded-full font-bold transition-all hover:bg-white/10">
+                            View Pricing Models
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8 bg-surface-container-lowest border-t border-white/5 opacity-80 hover:opacity-100 transition-opacity">
+<div class="font-headline-md text-headline-md text-secondary-fixed-dim">The Cosmic Architect</div>
+<div class="font-label-sm text-label-sm text-outline">
+            © 2024 The Cosmic Code | The Cosmic Architect
+        </div>
+<div class="flex gap-6">
+<a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors" href="#">Contact</a>
+<a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors" href="#">Privacy</a>
+</div>
+</footer>
+<script>
+        // Star Field Generation
+        const starField = document.getElementById('star-field');
+        const starCount = 150;
+
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            
+            const size = Math.random() * 2 + 1;
+            const posX = Math.random() * 100;
+            const posY = Math.random() * 100;
+            const duration = Math.random() * 30 + 20;
+            const delay = Math.random() * -50;
+            const opacity = Math.random() * 0.5 + 0.2;
+
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${posX}%`;
+            star.style.top = `${posY}%`;
+            star.style.opacity = opacity;
+            star.style.setProperty('--duration', `${duration}s`);
+            star.style.animationDelay = `${delay}s`;
+
+            starField.appendChild(star);
+        }
+
+        // Micro-interaction: Subtle parallax on hero image
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const heroImg = document.querySelector('header img');
+            if(heroImg) {
+                // Parallax effect
+                heroImg.style.transform = `translateY(${scroll * 0.15}px)`;
+            }
+        });
+
+        // Micro-interaction: Floating animation for glass elements
+        document.querySelectorAll('.glass-card').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 50}ms`;
+        });
+    </script>
+</body></html>

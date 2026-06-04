@@ -23,7 +23,7 @@
             transform: translate3d(0, 0, 0);
             backface-visibility: hidden;
             will-change: transform;
-            -webkit--webkit-backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
             backdrop-filter: blur(24px) !important;
         }
         #cosmic-cursor {
@@ -64,7 +64,7 @@
             will-change: transform;
             background: rgba(255, 255, 255, 0.03);
             -webkit-backdrop-filter: blur(24px);
-            backdrop-filter: blur(32px);
+            backdrop-filter: blur(24px);
             border-top: 1px solid rgba(255, 255, 255, 0.15);
             border-left: 1px solid rgba(255, 255, 255, 0.15);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -273,7 +273,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-7xl mx-auto scroll-reveal">
         <!-- Contact Form Section -->
         <div class="lg:col-span-7">
-            <div class="glass-panel p-8 md:p-12 rounded-xl relative overflow-hidden tilt-card">
+            <div class="glass-panel p-8 md:p-12 rounded-xl relative overflow-hidden">
                 <!-- Subtle Glow in background -->
                 <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 blur-[100px] rounded-full"></div>
                 <form class="space-y-8 relative z-10" id="inquiryForm">
@@ -346,7 +346,7 @@
             <div class="space-y-6">
                 <h3 class="font-headline-md text-headline-md text-on-surface">Transmission Protocol (FAQ)</h3>
                 <div class="space-y-4">
-                    <details class="glass-panel group rounded-lg p-4 cursor-pointer tilt-card">
+                    <details class="glass-panel group rounded-lg p-4 cursor-pointer">
                         <summary class="list-none flex justify-between items-center font-body-md font-semibold text-on-surface">
                             How long until my inquiry is decrypted?
                             <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
@@ -355,7 +355,7 @@
                             Most inquiries are processed within 2-3 lunar cycles (48-72 Earth hours). Premium readings receive priority transmission.
                         </div>
                     </details>
-                    <details class="glass-panel group rounded-lg p-4 cursor-pointer tilt-card">
+                    <details class="glass-panel group rounded-lg p-4 cursor-pointer">
                         <summary class="list-none flex justify-between items-center font-body-md font-semibold text-on-surface">
                             Do I need my exact birth time?
                             <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
@@ -364,7 +364,7 @@
                             Precise timing ensures a clearer resonance with the galactic grid, but a general approximation is acceptable for preliminary scans.
                         </div>
                     </details>
-                    <details class="glass-panel group rounded-lg p-4 cursor-pointer tilt-card">
+                    <details class="glass-panel group rounded-lg p-4 cursor-pointer">
                         <summary class="list-none flex justify-between items-center font-body-md font-semibold text-on-surface">
                             Secure Transmissions?
                             <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>

@@ -491,6 +491,17 @@
             cursorDot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
         }
 
+        // Smoothly glide background nebulas inside the requestAnimationFrame loop to prevent layout thrashing
+        const nebulas = document.querySelectorAll('.nebula-glow');
+        nebulas.forEach((nebula, index) => {
+            const speed = (index + 1) * 20;
+            const normX = cursorX / window.innerWidth;
+            const normY = cursorY / window.innerHeight;
+            const moveX = (normX - 0.5) * speed;
+            const moveY = (normY - 0.5) * speed;
+            nebula.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
+        });
+
         requestAnimationFrame(animateCursor);
     }
     animateCursor();
@@ -544,9 +555,13 @@
         });
     }
 
-    // Dynamic 3D Card Tilting (relative to each card's center)
+        // Dynamic 3D Card Tilting (High Performance GPU Tracking)
     const tiltCards = document.querySelectorAll('.tilt-card');
     tiltCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transition = 'none';
+        });
+        
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
             const cardX = e.clientX - rect.left;
@@ -560,29 +575,16 @@
             
             card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.02)`;
             card.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(214, 186, 255, 0.1)';
-            card.style.transition = 'transform 0.1s ease, box-shadow 0.1s ease';
         });
         
         card.addEventListener('mouseleave', () => {
+            card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease';
             card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
             card.style.boxShadow = 'none';
-            card.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
         });
     });
 
-    // Cursor-Responsive Ambient Background Nebulas
-    document.addEventListener('mousemove', (e) => {
-        const x = e.clientX / window.innerWidth;
-        const y = e.clientY / window.innerHeight;
-        
-        const nebulas = document.querySelectorAll('.nebula-glow');
-        nebulas.forEach((nebula, index) => {
-            const speed = (index + 1) * 30;
-            const moveX = (x - 0.5) * speed;
-            const moveY = (y - 0.5) * speed;
-            nebula.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        });
-    });
+
 
     // Cinematic Viewport Scroll Reveals
     const revealElements = document.querySelectorAll('.scroll-reveal');

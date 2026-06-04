@@ -13,6 +13,19 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .star {
+            will-change: transform;
+        }
+        .glass-card, .glass-panel {
+            -webkit--webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px) !important;
+        }
+        #cosmic-cursor {
+            transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
         body {
             background-color: #10131a;
             color: #e1e2eb;
@@ -44,6 +57,7 @@
 
         .glass-panel {
             background: rgba(255, 255, 255, 0.03);
+            -webkit-backdrop-filter: blur(24px);
             backdrop-filter: blur(32px);
             border-top: 1px solid rgba(255, 255, 255, 0.15);
             border-left: 1px solid rgba(255, 255, 255, 0.15);
@@ -202,8 +216,8 @@
 <div class="star-field" id="star-container"></div>
 
 <!-- Cosmic Custom Cursor -->
-<div id="cosmic-cursor" class="fixed top-0 left-0 w-8 h-8 rounded-full border border-primary pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-75 ease-out mix-blend-screen bg-primary/10 shadow-[0_0_15px_rgba(214,186,255,0.4)] hidden md:block"></div>
-<div id="cosmic-cursor-dot" class="fixed top-0 left-0 w-2 h-2 rounded-full bg-tertiary pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-75 ease-out hidden md:block"></div>
+<div id="cosmic-cursor" class="fixed top-0 left-0 w-8 h-8 rounded-full border border-primary pointer-events-none z-[9999] mix-blend-screen bg-primary/10 shadow-[0_0_15px_rgba(214,186,255,0.4)] hidden md:block"></div>
+<div id="cosmic-cursor-dot" class="fixed top-0 left-0 w-2 h-2 rounded-full bg-tertiary pointer-events-none z-[9999] hidden md:block"></div>
 
 <!-- Atmospheric Background Elements -->
 <div class="nebula-glow top-0 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full"></div>
@@ -396,12 +410,13 @@
         container.appendChild(star);
     }
 
-    // Dynamic Custom Cursor with Momentum / Elasticity
+    // Dynamic Custom Cursor with Momentum / Elasticity (High Performance translate3d)
     const cursor = document.getElementById('cosmic-cursor');
     const cursorDot = document.getElementById('cosmic-cursor-dot');
     let mouseX = 0, mouseY = 0;
     let cursorX = 0, cursorY = 0;
     let dotX = 0, dotY = 0;
+    let cursorScale = 1;
 
     document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
@@ -415,12 +430,10 @@
         dotY += (mouseY - dotY) * 0.25;
 
         if (cursor) {
-            cursor.style.left = `${cursorX}px`;
-            cursor.style.top = `${cursorY}px`;
+            cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%) scale(${cursorScale})`;
         }
         if (cursorDot) {
-            cursorDot.style.left = `${dotX}px`;
-            cursorDot.style.top = `${dotY}px`;
+            cursorDot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
         }
 
         requestAnimationFrame(animateCursor);
@@ -428,19 +441,19 @@
     animateCursor();
 
     // Hover scales and glows
-    const clickables = document.querySelectorAll('a, button, input, textarea, select, details, summary');
+    const clickables = document.querySelectorAll('a, button, input, textarea, select, details');
     clickables.forEach(el => {
         el.addEventListener('mouseenter', () => {
+            cursorScale = 1.6;
             if (cursor) {
-                cursor.style.transform = 'translate(-50%, -50%) scale(1.6)';
                 cursor.style.backgroundColor = 'rgba(0, 219, 233, 0.15)';
                 cursor.style.borderColor = '#00dbe9';
                 cursor.style.boxShadow = '0 0 20px rgba(0, 219, 233, 0.6)';
             }
         });
         el.addEventListener('mouseleave', () => {
+            cursorScale = 1;
             if (cursor) {
-                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
                 cursor.style.backgroundColor = 'rgba(214, 186, 255, 0.1)';
                 cursor.style.borderColor = '#d6baff';
                 cursor.style.boxShadow = '0 0 15px rgba(214, 186, 255, 0.4)';

@@ -105,6 +105,9 @@
             will-change: transform;
         }
         .glass-card, .glass-panel {
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            will-change: transform;
             -webkit--webkit-backdrop-filter: blur(24px);
             backdrop-filter: blur(24px) !important;
         }
@@ -243,7 +246,7 @@
     <div class="absolute inset-x-0 bottom-0 top-16 z-0 flex items-center justify-center overflow-hidden">
         <!-- High-Performance Single Video Loop with Rhythmic Cosmic Fade-Out Transition -->
         <div class="relative w-full h-full flex items-center justify-center bg-background">
-            <video id="hero-vortex-video" class="w-full h-full block object-cover absolute inset-0 transition-all duration-[700ms] ease-in-out video-reveal-anim" autoplay loop muted playsinline style="mask-image: linear-gradient(transparent 0%, black 20%, black 80%, transparent 100%);">
+            <video id="hero-vortex-video" class="w-full h-full block object-cover absolute inset-0 transition-all duration-[700ms] ease-in-out video-reveal-anim" autoplay loop muted playsinline >
                 <source src="Numerology Hero Section Vortex.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>

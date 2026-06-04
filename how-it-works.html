@@ -18,6 +18,9 @@
             will-change: transform;
         }
         .glass-card, .glass-panel {
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            will-change: transform;
             -webkit--webkit-backdrop-filter: blur(24px);
             backdrop-filter: blur(24px) !important;
         }
@@ -30,6 +33,9 @@
             overflow-x: hidden;
         }
         .glass-card {
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            will-change: transform;
             background: rgba(255, 255, 255, 0.03);
             -webkit-backdrop-filter: blur(24px);
             backdrop-filter: blur(24px);
